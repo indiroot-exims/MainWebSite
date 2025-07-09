@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndiRoot Exims</title>
+
+  <link rel="stylesheet" href="Css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Css/all.min.css" />
+  <link rel="stylesheet" href="Css/ContactUs.css" />
+  <link rel="stylesheet" href="Css/Style1.0.2.css">
+</head>
+<body>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("-vWObobuhF0dLdBao"); // Replace with your actual Public Key
+  })();
+</script>
+
+
+<div id="header"></div>
+<!-- Contact Section -->
+<section id="contact" class="contact-fullscreen">
+  <div class="container">
+    
+    <!-- Left Side - Contact Info -->
+    <div class="info-card">
+      <h2>Email Address</h2>
+      <p><i class="fa fa-envelope"></i> info@indirootexims.com</p>
+      
+      <h2>Location</h2>
+      <p style="max-width: 450px;"><strong>Registered Office:</strong><br>
+      TF-344 Aristo , Opp SHANGHANI SKYZ ,Bhayli 391410, Vadodara , Gujarat  India.</p>
+
+      <p><strong>Corporate Office:</strong><br>
+      <p>Phone: +91-8866402765</p>
+    </div>
+
+    <!-- Right Side - Contact Form -->
+    <div class="contact-form-card">
+      <h2>Reach Us</h2>
+      <form id="contact-form">
+        <div>
+          <input type="text" style="margin: 10px;" id="name" name="name" placeholder="Your Name*" required class="form-control">
+        </div>
+      
+        <div>
+          <input type="email" id="email" name="email" style="margin: 10px;" placeholder="Your Email" required class="form-control">
+        </div>
+      
+        <div>
+          <textarea id="enquiry" name="message" placeholder="Enquiry" style="margin: 10px;" rows="5" required class="form-control"></textarea>
+        </div>
+      
+        <button type="submit" class="btn-orange align-items-center" style="background-color: #313a63 !important; margin-left: 150px;">
+          Submit
+        </button>
+      </form>
+      
+    </div>
+
+  </div>
+</section>
+
+ <!-- FOOTER PLACEHOLDER -->
+ <div id="footer"></div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="enquirySuccessModal" tabindex="-1" aria-labelledby="enquirySuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-success text-white" >
+        <h5 class="modal-title" id="enquirySuccessModalLabel">Thank You!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="fs-5">🎉 Your enquiry has been submitted successfully!</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-success" style="background-color: #313a63;" data-bs-dismiss="modal">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_o21l6ck', 'template_39038qf', this)
+      .then(function(response) {
+         // Show Bootstrap modal instead of alert
+         var enquirySuccessModal = new bootstrap.Modal(document.getElementById('enquirySuccessModal'));
+         enquirySuccessModal.show();
+
+         // Reset the form after success
+         document.getElementById('contact-form').reset();
+      }, function(error) {
+         alert('FAILED... ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+
+
+<script src="Js/bootstrap.bundle.min.js"></script>
+<script src="js/SearchBox.js"></script>
+<script src="Js/InjectLayout.js"></script>
+</body>
+</html>

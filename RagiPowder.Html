@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Details - Ragi Powder</title>
+
+  <!-- Local Bootstrap and Font Awesome -->
+  <link rel="stylesheet" href="Css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Css/all.min.css" /> <!-- Font Awesome -->
+  <link rel="stylesheet" href="Css/ProductDetails.css" />
+  <link rel="stylesheet" href="Css/Style1.0.2.css">
+</head>
+<body>
+<!--Header-->
+  <div id="header"></div>
+
+  <div class="container py-5">
+    <div class="row gy-5">
+      
+      <!-- Card 1 -->  
+      <div class="col-md-12 mb-4">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="row g-0">
+                <!-- Images -->
+            <div class="col-md-5 p-3 d-flex flex-column align-items-center justify-content-center">
+              <div class="product-images w-100">
+                <div class="main-image-wrapper mb-2">
+                  <img src="Images/MoringaLeafPowder1.jpg" alt="Banana Powder - Spray Dried" class="main-image img-fluid rounded" />
+                </div>
+                <div class="thumbnail-row d-flex justify-content-center">
+                <img src="Images/MoringaLeafPowder2.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder3.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder1.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                </div>
+              </div>
+            </div>
+
+                        <!-- Details -->
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center product-details">
+              <h1 class="mb-2">Ragi Flour</h1>
+                <p class="short-description">Ragi flour is produced by cleaning, drying, and milling whole finger millet grains into a fine powder.</p>
+                <div class="specs">
+                  <p><strong>Color:</strong> Light Brown</p>
+                  <p><strong>Shelf Life:</strong> 12 Months</p>
+                  <p><strong>MOQ:</strong> 50 kg</p>
+                </div>
+              <div>
+                <a class="btn btn-primary rounded-pill mt-2 px-4" href="ContactUs.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+       <div class="col-md-12 mb-4">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="row g-0">
+                <!-- Images -->
+            <div class="col-md-5 p-3 d-flex flex-column align-items-center justify-content-center">
+              <div class="product-images w-100">
+                <div class="main-image-wrapper mb-2">
+                  <img src="Images/MoringaLeafPowder1.jpg" alt="Banana Powder - Spray Dried" class="main-image img-fluid rounded" />
+                </div>
+                <div class="thumbnail-row d-flex justify-content-center">
+                <img src="Images/MoringaLeafPowder2.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder3.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder1.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                </div>
+              </div>
+            </div>
+
+                        <!-- Details -->
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center product-details">
+              <h1 class="mb-2">Ragi Powder</h1>
+                <p class="short-description"></p>
+                <div class="specs">
+                  <p><strong>Shelf Life:</strong> 12 Months</p>
+                  <p><strong>MOQ:</strong> 50 kg</p>
+                </div>
+              <div>
+                <a class="btn btn-primary rounded-pill mt-2 px-4" href="ContactUs.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Card 3 -->
+      <div class="col-md-12 mb-4">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="row g-0">
+                <!-- Images -->
+            <div class="col-md-5 p-3 d-flex flex-column align-items-center justify-content-center">
+              <div class="product-images w-100">
+                <div class="main-image-wrapper mb-2">
+                  <img src="Images/MoringaLeafPowder1.jpg" alt="Banana Powder - Spray Dried" class="main-image img-fluid rounded" />
+                </div>
+                <div class="thumbnail-row d-flex justify-content-center">
+                <img src="Images/MoringaLeafPowder2.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder3.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                  <img src="Images/MoringaLeafPowder1.jpg" onclick="changeImage(this)" class="img-thumbnail" />
+                </div>
+              </div>
+            </div>
+
+                        <!-- Details -->
+            <div class="col-md-7 p-4 d-flex flex-column justify-content-center product-details">
+              <h1 class="mb-2">Organic Ragi Powder</h1>
+                <p class="short-description">Organic Ragi Powder is manufactured from organically cultivated finger millet grains, cleaned and ground under certified hygienic conditions without chemical treatment or processing agents.</p>
+                <div class="specs">
+                   <p><strong>Shelf Life:</strong> 6 Months</p>
+                   <p><strong>MOQ:</strong> 100 kg</p>
+                </div>
+              <div>
+                <a class="btn btn-primary rounded-pill mt-2 px-4" href="ContactUs.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Card 4 -->
+     
+    </div>
+  </div>
+  
+
+<!-- Image Change Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".product-images");
+
+    cards.forEach((card) => {
+      const thumbnails = card.querySelectorAll(".img-thumbnail");
+      const mainImage = card.querySelector(".main-image");
+      const imageList = Array.from(thumbnails).map(thumb => thumb.src);
+      let currentIndex = 0;
+
+      // Thumbnail click changes the main image
+      thumbnails.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          mainImage.style.opacity = 0;
+          setTimeout(() => {
+            mainImage.src = thumb.src;
+            mainImage.style.opacity = 1;
+            currentIndex = imageList.indexOf(thumb.src);
+          }, 300);
+        });
+      });
+
+      // Auto-rotate function for this card
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % imageList.length;
+        mainImage.style.opacity = 0;
+        setTimeout(() => {
+          mainImage.src = imageList[currentIndex];
+          mainImage.style.opacity = 1;
+        }, 300);
+      }, 4000);
+    });
+  });
+</script>
+
+
+<!-- Optional Bootstrap JS -->
+<script src="Js/bootstrap.bundle.min.js"></script>
+<script src="js/SearchBox.js"></script>
+<script src="js/InjectLayout.js"></script>
+</body>
+
+  
+   <!-- FOOTER PLACEHOLDER -->
+   <div id="footer"></div>
+</html>
