@@ -1,12 +1,12 @@
-function getBasePath() {
+function getBaseURL() {
   const path = window.location.pathname;
-  const depth = (path.match(/\//g) || []).length - 1;
-  return '../'.repeat(depth);
+  const repoName = path.split("/")[1];
+  return `/${repoName}/`;
 }
 
-function loadHTML(selector, filename) {
-  const basePath = getBasePath(); // resolves relative path
-  fetch(`${basePath}${filename}`)
+function loadHTML(selector, file) {
+  const base = getBaseURL();
+  fetch(base + file)
     .then(res => {
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
@@ -16,8 +16,8 @@ function loadHTML(selector, filename) {
     .then(data => {
       document.querySelector(selector).innerHTML = data;
     })
-    .catch(error => {
-      console.error(`Failed to load ${filename}:`, error);
+    .catch(err => {
+      console.error(`Failed to load ${file}:`, err);
     });
 }
 
