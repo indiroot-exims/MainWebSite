@@ -1,6 +1,12 @@
+function getBasePath() {
+  const path = window.location.pathname;
+  const depth = (path.match(/\//g) || []).length - 1;
+  return '../'.repeat(depth);
+}
+
 function loadHTML(selector, filename) {
-  const path = `${window.location.origin}/MainWebSite/${filename}`;
-  fetch(path)
+  const basePath = getBasePath(); // resolves relative path
+  fetch(`${basePath}${filename}`)
     .then(res => {
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
