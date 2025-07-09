@@ -1,0 +1,105 @@
+/* ==== Hero Carousel Section ==== */
+#aboutCarousel {
+  height: 800px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#aboutCarousel .carousel-inner,
+#aboutCarousel .carousel-item {
+  height: 800px !important;
+}
+
+#aboutCarousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+#aboutCarousel .carousel-caption {
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Offset the transform for perfect centering */
+  /* background-color: rgba(147, 52, 52, 0.6); */
+  padding: 30px 40px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  max-width: 85%;
+  animation: fadeInUp 1s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+}
+
+#aboutCarousel .carousel-caption h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  width: 600px;
+}
+
+#aboutCarousel .carousel-caption p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 10px;
+  width: 1000px; /* Spacing between heading and paragraph */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  #aboutCarousel {
+    height: 500px;
+  }
+
+  #aboutCarousel .carousel-inner,
+  #aboutCarousel .carousel-item {
+    height: 500px !important;
+  }
+
+  #aboutCarousel .carousel-caption {
+    padding: 15px 20px;
+    max-width: 95%;
+  }
+
+  #aboutCarousel .carousel-caption h2 {
+    font-size: 2rem;
+  }
+
+  #aboutCarousel .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+.header-section {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: #f9f9f9;
+}
+
+.header-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+

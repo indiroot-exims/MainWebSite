@@ -1,0 +1,103 @@
+
+.bg-product-section {
+  background-image: url(../images/ProductBacjGround1.0.2.jpg); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.bg-product-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2px; /* Light overlay */
+  z-index: -1;
+}
+
+/* Optional button styling */
+.btn-orange {
+  background-color: #f57c00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+.btn-orange:hover {
+  background-color: #ef6c00;
+}
+
+/* Optional image sizing */
+.card-img-top {
+  max-height: 180px;
+  object-fit: cover;
+}
+
+/* Make sure carousel arrows are centered vertically */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Optional: Define btn-orange if not already styled */
+.btn-orange {
+  background-color: #313a63;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.btn-orange:hover {
+  background-color: #ef6c00;
+}
+
+
+
+/* Optional: Prevent cards from stretching too tall */
+.card img {
+  max-height: 180px;
+  object-fit: fill;
+}
+
+@keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-left {
+    opacity: 0;
+    animation: slideInLeft 2s ease forwards;
+  }
+  
+  .animate-right {
+    opacity: 0;
+    animation: slideInRight 2s ease forwards;
+  }
+  
+.main-image {
+  width: 80% !important;
+}
+  
