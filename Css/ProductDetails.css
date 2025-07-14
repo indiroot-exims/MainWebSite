@@ -9,6 +9,9 @@ body {
 .card {
     max-height: 350px;
     transition: transform 0.3s ease-in-out;
+    padding: 20px 30px;
+    border-radius: 12px;
+    background-color: #fff;
 }
 
 .card:hover {
@@ -51,17 +54,19 @@ body {
 }
 
 /* Product Details */
-.product-details{
-padding-left: 50px !important;
+.product-details {
+    padding-left: 40px;
 }
 
-.product-details h1 {
+.product-details h1,
+.card-title {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.short-description {
+.short-description,
+.card-text {
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
@@ -79,13 +84,38 @@ padding-left: 50px !important;
     margin-bottom: 10px;
 }
 
-/* Button Styling */
-.btn {
-    padding: 0.4rem 1.2rem;
+.card ul {
     font-size: 14px;
-    border-radius: 20px;
+    padding-left: 18px;
+    margin-bottom: 10px;
 }
 
-button.btn i {
-    font-size: 16px;
+/* Updated Button Styling */
+.custom-btn {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background-color: #ffb300;
+    color: #fff;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .product-details {
+        padding-left: 0 !important;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }
