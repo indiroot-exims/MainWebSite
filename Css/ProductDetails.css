@@ -25,7 +25,7 @@ body {
 
 /* Product Image */
 .product-image {
-    width: 100%;
+    width: 115%;
     max-height: 250px; /* Increased height */
     object-fit: contain;
     border-radius: 10px;
