@@ -5,29 +5,43 @@ body {
     margin: 0;
 }
 
+/* Top Spacing Under Navbar */
+.top-spacer {
+    margin-top: 40px;
+}
+
 /* Card Styling */
 .card {
-    max-height: 350px;
     transition: transform 0.3s ease-in-out;
     padding: 20px 30px;
     border-radius: 12px;
     background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
     transform: scale(1.01);
 }
 
-/* Main Image */
+/* Product Image */
+.product-image {
+    width: 100%;
+    max-height: 250px; /* Increased height */
+    object-fit: contain;
+    border-radius: 10px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Main Image Wrapper (if used elsewhere) */
 .main-image-wrapper {
     width: 100%;
-    height: 220px;
+    height: 250px;
     overflow: hidden;
 }
 
 .main-image {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: fill;
     border-radius: 10px;
     transition: opacity 0.4s ease-in-out;
@@ -90,7 +104,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Updated Button Styling */
+/* Button Styling */
 .custom-btn {
     background-color: #ffcc00;
     color: #000;
