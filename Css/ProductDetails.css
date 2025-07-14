@@ -7,7 +7,7 @@ body {
 
 /* Top Spacing Under Navbar */
 .top-spacer {
-    margin-top: 40px;
+    margin-top: 40px !important;
 }
 
 /* Card Styling */
