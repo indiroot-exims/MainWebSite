@@ -103,3 +103,38 @@
   color: #666;
 }
 
+.certifications-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #2a5d9f;
+  position: relative;
+}
+
+.cert-box {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eaeaea;
+}
+
+.cert-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.cert-box i {
+  color: #007bff;
+}
+
+.apeda-logo {
+  max-height: 60px;
+  width: auto;
+  display: inline-block;
+}
+
+
