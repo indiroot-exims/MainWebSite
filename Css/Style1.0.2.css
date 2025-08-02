@@ -1,5 +1,3 @@
-/* Removed #preloader and body.loading styles */
-
 /* ==== Hero Section Carousel (Optimized & Fixed Layout) ==== */
 .heroCarousel {
   height: 800px;
@@ -33,12 +31,10 @@
   transition: opacity 0.8s ease, transform 1.2s ease;
 }
 
-
 .heroCarousel .carousel-item.active img {
   opacity: 1;
   transform: scale(1.03);
 }
-
 
 .heroCarousel .carousel-caption {
   position: absolute;
@@ -87,6 +83,22 @@
 .heroCarousel .carousel-control-prev,
 .heroCarousel .carousel-control-next {
   display: none !important;
+}
+
+/* ==== Product Card Image Wrapper Styling ==== */
+.product-image-wrapper {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* ==== Footer Styling ==== */
@@ -267,5 +279,3 @@
     right: 10px;
   }
 }
-
-
