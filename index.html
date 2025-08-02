@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IndiRoot Exims</title>
 
-  <!-- Preload critical assets -->
-  <link rel="preload" as="image" href="Images/Farming.jpg" />
-  <link rel="preload" as="image" href="Images/Loading_2.gif" />
-  <link rel="preload" as="style" href="Css/bootstrap.min.css" />
-  <link rel="preload" as="style" href="Css/all.min.css" />
-  <link rel="preload" as="style" href="Css/Style1.0.2.css" />
+  <!-- Removed preloading of images and styles -->
 
   <!-- CSS Files -->
   <link rel="stylesheet" href="Css/bootstrap.min.css" />
@@ -19,10 +14,7 @@
 </head>
 
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="Images/Loading_2.gif" alt="Loading..." />
-  </div>
+  <!-- Removed preloader div -->
 
   <!-- Header -->
   <div id="header"></div>
@@ -101,16 +93,18 @@
               <div class="card border-0 shadow-sm" style="width: 220px; height: 320px;">
                 <img src="Images/OurProduct-BananaPowder.png" class="card-img-top" alt="Banana Powder" loading="lazy" />
                 <div class="card-body d-flex flex-column align-items-center justify-content-between">
-                 
-                  <a href="BananaPowder.html" class="btn btn-outline-primary btn-sm mt-2"> <h5 class="card-title">Banana Powder</h5></a>
+                  <a href="BananaPowder.html" class="btn btn-outline-primary btn-sm mt-2">
+                    <h5 class="card-title">Banana Powder</h5>
+                  </a>
                 </div>
               </div>
 
               <div class="card border-0 shadow-sm" style="width: 220px; height: 320px;">
                 <img src="Images/OurProduct-Moringa2.png" class="card-img-top" alt="Moringa Powder" loading="lazy" />
                 <div class="card-body d-flex flex-column align-items-center justify-content-between">
-                 
-                  <a href="MoringaPowder.html" class="btn btn-outline-primary btn-sm mt-2"> <h5 class="card-title">Moringa Powder</h5></a>
+                  <a href="MoringaPowder.html" class="btn btn-outline-primary btn-sm mt-2">
+                    <h5 class="card-title">Moringa Powder</h5>
+                  </a>
                 </div>
               </div>
             </div>
@@ -162,16 +156,6 @@
   <script defer src="Js/SearchBox.js"></script>
   <script defer src="Js/InjectLayout.js"></script>
 
-  <!-- Preloader Script -->
-  <script>
-    window.addEventListener('load', function () {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.opacity = '0';
-        preloader.style.pointerEvents = 'none';
-        setTimeout(() => preloader.remove(), 500);
-      }
-    });
-  </script>
+  <!-- Removed preloader script -->
 </body>
 </html>
