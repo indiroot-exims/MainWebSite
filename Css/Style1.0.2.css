@@ -15,7 +15,7 @@
   transition: opacity 1s ease-in-out;
 }
 
-.heroCarousel .carousel-item img {
+.heroCarousel .carousel-item .hero-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@
   transform: scale(1);
 }
 
-.heroCarousel .carousel-item.active img {
+.heroCarousel .carousel-item.active .hero-img.loaded {
   opacity: 1;
   transform: scale(1.02);
 }
