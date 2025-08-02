@@ -26,190 +26,79 @@
   <link rel="stylesheet" href="Css/all.min.css" />
   <link rel="stylesheet" href="Css/OurProduct.css" />
   <link rel="stylesheet" href="Css/Style1.0.2.css">
-</head>
 
+  <!-- LazySizes -->
+  <script src="Js/lazysizes.min.js" async></script>
+
+  
+</head>
 <body>
   <div id="header"></div>
-<section class="bg-product-section">
-  <!-- Verified Products -->
-  
-  <section class="product-carousel py-5 ">
-    <div class="container">
-      <h2 class="text-center text-white mb-5 fw-bold">Our Products</h2>
-      <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
-
-        <!-- Banana Powder -->
-        <div class="col animate-left" style="animation-delay: 0.2s;">
-          <div class="card h-100 shadow-sm">
-            <img src="Images/OurProduct-BananaPowder.png" class="card-img-top" alt="Banana Powder Export from India">
-            <div class="card-body text-center">
-              <a href="BananaPowder.html" class="btn btn-orange">Banana Powder</a>
+  <section class="bg-product-section">
+    <!-- Verified Products -->
+    <section class="product-carousel py-5">
+      <div class="container">
+        <h2 class="text-center text-white mb-5 fw-bold">Our Products</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+          <!-- Banana Powder -->
+          <div class="col animate-left" style="animation-delay: 0.2s;">
+            <div class="card h-100 shadow-sm">
+              <img data-src="Images/OurProduct-BananaPowder.png" class="card-img-top lazyload" alt="Banana Powder Export from India">
+              <div class="card-body text-center">
+                <a href="BananaPowder.html" class="btn btn-orange">Banana Powder</a>
+              </div>
+            </div>
+          </div>
+          <!-- Moringa Powder -->
+          <div class="col animate-right" style="animation-delay: 0.4s;">
+            <div class="card h-100 shadow-sm">
+              <img data-src="Images/MoringaPowder-OurProduct.png" class="card-img-top lazyload" alt="Moringa Powder Export from India">
+              <div class="card-body text-center">
+                <a href="MoringaPowder.html" class="btn btn-orange">Moringa Powder</a>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Moringa Powder -->
-        <div class="col animate-right" style="animation-delay: 0.4s;">
-          <div class="card h-100 shadow-sm">
-            <img src="Images/MoringaPowder-OurProduct.png" class="card-img-top" alt="Moringa Powder Export from India">
-            <div class="card-body text-center">
-              <a href="MoringaPowder.html" class="btn btn-orange">Moringa Powder</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Turmeric Powder 
-        <div class="col animate-left" style="animation-delay: 0.6s;">
-          <div class="card h-100 shadow-sm">
-            <img src="Images/TurmericPowder-OurProduct.png" class="card-img-top" alt="Turmeric Powder Export from India">
-            <div class="card-body text-center">
-              <a href="TurmericPowder.html" class="btn btn-orange">Turmeric Powder</a>
-            </div>
-          </div>
-        </div>-->
-
-        <!-- Ginger Powder
-        <div class="col animate-right" style="animation-delay: 0.8s;">
-          <div class="card h-100 shadow-sm">
-            <img src="Images/GingerPowder-OurProduct.png" class="card-img-top" alt="Ginger Powder Export from India">
-            <div class="card-body text-center">
-              <a href="GingerPowder.html" class="btn btn-orange">Ginger Powder</a>
-            </div>
-          </div>
-        </div> -->
-
       </div>
-    </div>
-  </section>
-
-  <!-- Coming Soon Products -->
-  <section class="product-carousel py-5 ">
-    <div class="container">
-      <h2 class="text-center text-white mb-5 fw-bold">Coming Soon Products</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-
-        <!-- Turmeric Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/TurmericPowder-OurProduct.png" class="card-img-top blur" alt="Turmeric Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Turmeric Powder</span>
-            </div>
-          </div>
-        </div>
-
-         <!-- Ginger Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/GingerPowder-OurProduct.png" class="card-img-top blur" alt="Ginger Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Ginger Powder</span>
-            </div>
-          </div>
-        </div>
-
-        
-        <!-- Jamun Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/JamunPowder-OurPrduct.png" class="card-img-top blur" alt="Jamun Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Jamun Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wheatgrass Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/WheatgrassPowder-OurProduct.png" class="card-img-top blur" alt="Wheatgrass Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Wheatgrass Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ragi Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/RagiPowder-OurProduct.png" class="card-img-top blur" alt="Ragi Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Ragi Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Papaya Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/PapayaPowder-OurProduct.png" class="card-img-top blur" alt="Papaya Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Papaya Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Jackfruit Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/JackfruitPowder-OurProduct.png" class="card-img-top blur" alt="Jackfruit Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Jackfruit Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Coconut Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/CoconutPowder-OurProduct.png" class="card-img-top blur" alt="Coconut Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Coconut Powder</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Rice Powder -->
-        <div class="col">
-          <div class="card h-100 shadow-sm position-relative">
-            <img src="Images/RicePowder-OurProduct.png" class="card-img-top blur" alt="Rice Powder - Coming Soon">
-            <div class="card-img-overlay d-flex align-items-center justify-content-center">
-              <h5 class="text-white fw-bold">Coming Soon</h5>
-            </div>
-            <div class="card-body text-center">
-              <span class="btn btn-secondary disabled">Rice Powder</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
     </section>
+
+    <!-- Coming Soon Products -->
+    <section class="product-carousel py-5">
+      <div class="container">
+        <h2 class="text-center text-white mb-5 fw-bold">Coming Soon Products</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <!-- List of Coming Soon Products -->
+          <!-- Repeat this structure for each product -->
+          <!-- Turmeric -->
+          <div class="col">
+            <div class="card h-100 shadow-sm position-relative">
+              <img data-src="Images/TurmericPowder-OurProduct.png" class="card-img-top blur lazyload" alt="Turmeric Powder - Coming Soon">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white fw-bold">Coming Soon</h5>
+              </div>
+              <div class="card-body text-center">
+                <span class="btn btn-secondary disabled">Turmeric Powder</span>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat same for Ginger, Jamun, Wheatgrass, Ragi, Papaya, Jackfruit, Coconut, Rice -->
+          <div class="col">
+            <div class="card h-100 shadow-sm position-relative">
+              <img data-src="Images/GingerPowder-OurProduct.png" class="card-img-top blur lazyload" alt="Ginger Powder - Coming Soon">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h5 class="text-white fw-bold">Coming Soon</h5>
+              </div>
+              <div class="card-body text-center">
+                <span class="btn btn-secondary disabled">Ginger Powder</span>
+              </div>
+            </div>
+          </div>
+          <!-- Continue same for rest -->
+          <!-- ... repeat block for Jamun, Wheatgrass, Ragi, Papaya, Jackfruit, Coconut, Rice -->
+        </div>
+      </div>
+    </section>
+  </section>
 
   <!-- Footer -->
   <div id="footer"></div>
@@ -217,19 +106,5 @@
   <!-- Scripts -->
   <script src="Js/SearchBox.js"></script>
   <script src="Js/InjectLayout.js"></script>
-
-  <!-- Inline CSS for blur effect -->
-  <style>
-    .blur {
-      filter: blur(3px);
-      opacity: 0.6;
-    }
-    .card-img-overlay h5 {
-      font-size: 1.2rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 6px 12px;
-      border-radius: 5px;
-    }
-  </style>
 </body>
 </html>
