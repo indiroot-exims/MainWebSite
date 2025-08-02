@@ -1,12 +1,5 @@
-function getBaseURL() {
-  const path = window.location.pathname;
-  const repoName = path.split("/")[1];
-  return `/${repoName}/`;
-}
-
 function loadHTML(selector, file) {
-  const base = getBaseURL();
-  fetch(base + file)
+  fetch(file)
     .then(res => {
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
