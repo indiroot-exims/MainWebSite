@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="Css/bootstrap.min.css" />
   <link rel="stylesheet" href="Css/all.min.css" />
   <link rel="stylesheet" href="Css/Style1.0.2.css" />
+
+  <!-- Preload Hero Images -->
+  <link rel="preload" as="image" href="Images/Farming.jpg">
+  <link rel="preload" as="image" href="Images/Harvesting.jpg">
+  <link rel="preload" as="image" href="Images/Transformation.jpg">
+  <link rel="preload" as="image" href="Images/Seal_With_Care_Cropped_1280x850.png">
+  <link rel="preload" as="image" href="Images/India to World.jpg">
 </head>
 
 <body>
@@ -18,7 +25,6 @@
   <!-- Hero Section -->
   <section id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
     <div class="carousel-inner">
-
       <div class="carousel-item active">
         <img src="Images/Farming.jpg" class="d-block w-100 hero-img" alt="Indian Farms" loading="eager" />
         <div class="carousel-caption d-flex align-items-center justify-content-center text-center">
@@ -28,9 +34,8 @@
           </div>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="Images/Harvesting.jpg" class="d-block w-100 hero-img" alt="Harvesting" loading="lazy" />
+        <img src="Images/Harvesting.jpg" class="d-block w-100 hero-img" alt="Harvesting" loading="eager" />
         <div class="carousel-caption d-flex align-items-center justify-content-center text-center">
           <div>
             <h1>Nature’s Goodness in Our Hands</h1>
@@ -38,9 +43,8 @@
           </div>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="Images/Transformation.jpg" class="d-block w-100 hero-img" alt="Processing" loading="lazy" />
+        <img src="Images/Transformation.jpg" class="d-block w-100 hero-img" alt="Processing" loading="eager" />
         <div class="carousel-caption d-flex align-items-center justify-content-center text-center">
           <div>
             <h1>Tradition Meets Technology</h1>
@@ -48,9 +52,8 @@
           </div>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="Images/Seal_With_Care_Cropped_1280x850.png" class="d-block w-100 hero-img" alt="Packaging" loading="lazy" />
+        <img src="Images/Seal_With_Care_Cropped_1280x850.png" class="d-block w-100 hero-img" alt="Packaging" loading="eager" />
         <div class="carousel-caption d-flex align-items-center justify-content-center text-center">
           <div>
             <h1>Sealed with Care</h1>
@@ -58,9 +61,8 @@
           </div>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="Images/India to World.jpg" class="d-block w-100 hero-img" alt="Export" loading="lazy" />
+        <img src="Images/India to World.jpg" class="d-block w-100 hero-img" alt="Export" loading="eager" />
         <div class="carousel-caption d-flex align-items-center justify-content-center text-center">
           <div style="color:#cf9e0c;">
             <h1>From India to the World</h1>
@@ -68,7 +70,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -165,10 +166,35 @@
   <script defer src="Js/bootstrap.bundle.min.js"></script>
   <script defer src="Js/SearchBox.js"></script>
   <script defer src="Js/InjectLayout.js"></script>
-
-  <!-- Removed forced lazySizes for all images -->
-
-  <!-- LazySizes Script (only applies to product images etc.) -->
   <script src="Js/lazysizes.min.js" async></script>
+
+  <!-- Wait for all hero images before carousel starts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector("#heroCarousel");
+      const images = carousel.querySelectorAll("img");
+      let loadedCount = 0;
+
+      images.forEach((img) => {
+        if (img.complete) {
+          loadedCount++;
+        } else {
+          img.addEventListener("load", () => {
+            loadedCount++;
+            if (loadedCount === images.length) startCarousel();
+          });
+        }
+      });
+
+      if (loadedCount === images.length) startCarousel();
+
+      function startCarousel() {
+        new bootstrap.Carousel(carousel, {
+          interval: 4000,
+          ride: "carousel",
+        });
+      }
+    });
+  </script>
 </body>
 </html>
