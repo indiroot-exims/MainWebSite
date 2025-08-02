@@ -7,7 +7,7 @@
 
   <!-- Preload critical images -->
   <link rel="preload" as="image" href="Images/Farming.jpg">
-  <link rel="preload" as="image" href="Images/Preloader.gif">
+  <link rel="preload" as="image" href="Images/Loading_2.gif">
 
   <!-- Preload CSS -->
   <link rel="preload" as="style" href="Css/bootstrap.min.css" />
@@ -26,8 +26,8 @@
 
 <body>
   <!-- Preloader -->
-  <div id="preloader">
-  <span>Loading...</span>
+<div id="preloader">
+  <img src="Images/Loading_2.gif" alt="Loading..." />
 </div>
 
   <!-- HEADER PLACEHOLDER -->
@@ -172,12 +172,17 @@
 
   <!-- Preloader Hide Script -->
   <script>
-    window.addEventListener('load', function () {
+  window.addEventListener('load', function () {
     const preloader = document.getElementById('preloader');
-    if (preloader) preloader.style.display = 'none';
+    if (preloader) {
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+      setTimeout(() => preloader.style.display = 'none', 500);
+    }
   });
-    });
-  </script>
+</script>
+
 </body>
 </html>
+
 
