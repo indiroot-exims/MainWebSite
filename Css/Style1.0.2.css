@@ -1,4 +1,4 @@
-/* ==== Hero Section Carousel (Optimized & Fixed Layout) ==== */
+/* ==== HERO CAROUSEL STYLING ==== */
 .heroCarousel {
   height: 800px;
   width: 100%;
@@ -11,7 +11,8 @@
   height: 100%;
   width: 100%;
   position: relative;
-  min-height: 800px; /* Prevent shrinking */
+  min-height: 800px;
+  transition: opacity 1s ease-in-out;
 }
 
 .heroCarousel .carousel-item img {
@@ -20,20 +21,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  min-width: 100%;
   object-fit: cover;
-  object-position: center;
   background-color: #000;
   display: block;
   opacity: 0;
+  transition: opacity 1s ease, transform 1.2s ease;
   transform: scale(1);
-  transition: opacity 0.8s ease, transform 1.2s ease;
 }
 
 .heroCarousel .carousel-item.active img {
   opacity: 1;
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .heroCarousel .carousel-caption {
@@ -85,7 +83,7 @@
   display: none !important;
 }
 
-/* ==== Product Card Image Wrapper Styling ==== */
+/* ==== PRODUCT IMAGE CARD WRAPPER ==== */
 .product-image-wrapper {
   width: 100%;
   height: 220px;
@@ -101,7 +99,7 @@
   object-fit: contain;
 }
 
-/* ==== Footer Styling ==== */
+/* ==== FOOTER STYLING ==== */
 .modern-footer {
   background-color: #13182d !important;
   color: #eee;
@@ -148,7 +146,7 @@
   font-size: 20px;
 }
 
-/* ==== Navbar & Search Box Styling ==== */
+/* ==== NAVBAR & SEARCH BOX ==== */
 .navbar-collapse {
   display: flex;
   justify-content: space-between;
@@ -192,35 +190,23 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ==== Responsive Fixes ==== */
+/* ==== RESPONSIVE FIXES ==== */
 @media (max-width: 992px) {
   .heroCarousel {
     height: 600px;
   }
-
   .heroCarousel .carousel-inner,
   .heroCarousel .carousel-item {
     height: 600px;
-    min-height: 600px; /* Prevent shrinking */
+    min-height: 600px;
   }
-
-  .heroCarousel .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   .heroCarousel .carousel-caption {
     padding: 15px 25px;
     max-width: 90%;
   }
-
   .heroCarousel .carousel-caption h1 {
     font-size: 2.2rem;
   }
-
   .heroCarousel .carousel-caption p {
     font-size: 1.2rem;
   }
@@ -230,50 +216,34 @@
   .heroCarousel {
     height: 480px;
   }
-
   .heroCarousel .carousel-inner,
   .heroCarousel .carousel-item {
     height: 480px;
-    min-height: 480px; /* Prevent shrinking */
+    min-height: 480px;
   }
-
-  .heroCarousel .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   .heroCarousel .carousel-caption {
     padding: 12px 20px;
     max-width: 95%;
   }
-
   .heroCarousel .carousel-caption h1 {
     font-size: 1.6rem;
   }
-
   .heroCarousel .carousel-caption p {
     font-size: 0.95rem;
   }
-
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     padding: 0 15px;
   }
-
   .navbar-collapse {
     flex-direction: column;
     align-items: flex-start;
   }
-
   #searchProduct.expanded {
     width: 100%;
   }
-
   #search-icon {
     top: 10px;
     right: 10px;
