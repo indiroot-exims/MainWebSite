@@ -17,14 +17,12 @@
   object-fit: contain;
 }
 
-/* Preloader visibility only affects preloader, not page */
 body.loading #mainContent {
   visibility: hidden;
   overflow: hidden;
 }
 
-
-/* ==== Hero Section Carousel (Optimized) ==== */
+/* ==== Hero Section Carousel (Optimized & Fixed Layout) ==== */
 .heroCarousel {
   height: 800px;
   width: 100%;
@@ -34,15 +32,17 @@ body.loading #mainContent {
 
 .heroCarousel .carousel-inner,
 .heroCarousel .carousel-item {
-  height: 800px !important;
-  transition: opacity 0.6s ease-in-out;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .heroCarousel .carousel-item img {
-  height: 100% !important;
-  width: 100% !important;
-  object-fit: cover !important;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   object-position: center;
+  display: block;
   transition: transform 1.2s ease;
 }
 
@@ -198,7 +198,7 @@ body.loading #mainContent {
 
   .heroCarousel .carousel-inner,
   .heroCarousel .carousel-item {
-    height: 600px !important;
+    height: 600px;
   }
 
   .heroCarousel .carousel-caption {
@@ -222,7 +222,7 @@ body.loading #mainContent {
 
   .heroCarousel .carousel-inner,
   .heroCarousel .carousel-item {
-    height: 480px !important;
+    height: 480px;
   }
 
   .heroCarousel .carousel-caption {
