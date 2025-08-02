@@ -1,3 +1,29 @@
+/* ==== Preloader Styling ==== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #13182d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#preloader span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Hide content until fully loaded */
+body.loading {
+  visibility: hidden;
+  overflow: hidden;
+}
+
 /* ==== Hero Section Carousel (Optimized) ==== */
 .heroCarousel {
   height: 800px;
@@ -6,13 +32,11 @@
   overflow: hidden;
 }
 
-/* Full height for carousel content */
 .heroCarousel .carousel-inner,
 .heroCarousel .carousel-item {
   height: 800px !important;
 }
 
-/* Image Styling */
 .heroCarousel .carousel-item img {
   height: 100% !important;
   width: 100% !important;
@@ -20,7 +44,6 @@
   object-position: center;
 }
 
-/* Caption Overlay */
 .heroCarousel .carousel-caption {
   position: absolute;
   top: 50%;
@@ -35,7 +58,6 @@
   max-width: 80%;
 }
 
-/* Headline & Paragraph - Fade Up */
 .heroCarousel .carousel-caption h1,
 .heroCarousel .carousel-caption p {
   opacity: 0;
@@ -55,7 +77,6 @@
   font-weight: 400;
 }
 
-/* Animation Keyframes */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -67,7 +88,6 @@
   }
 }
 
-/* Hide controls */
 .heroCarousel .carousel-control-prev,
 .heroCarousel .carousel-control-next {
   display: none !important;
