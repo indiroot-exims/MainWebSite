@@ -169,32 +169,36 @@
   <script src="Js/lazysizes.min.js" async></script>
 
   <!-- Wait for all hero images before carousel starts -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector("#heroCarousel");
-      const images = carousel.querySelectorAll("img");
-      let loadedCount = 0;
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector("#heroCarousel");
+    const images = carousel.querySelectorAll("img");
+    let loadedCount = 0;
 
-      images.forEach((img) => {
-        if (img.complete) {
+    images.forEach((img) => {
+      if (img.complete) {
+        img.classList.add("loaded"); // ✅ Add this line
+        loadedCount++;
+      } else {
+        img.addEventListener("load", () => {
+          img.classList.add("loaded"); // ✅ Add this line
           loadedCount++;
-        } else {
-          img.addEventListener("load", () => {
-            loadedCount++;
-            if (loadedCount === images.length) startCarousel();
-          });
-        }
-      });
-
-      if (loadedCount === images.length) startCarousel();
-
-      function startCarousel() {
-        new bootstrap.Carousel(carousel, {
-          interval: 4000,
-          ride: "carousel",
+          if (loadedCount === images.length) startCarousel();
         });
       }
     });
-  </script>
+
+    if (loadedCount === images.length) startCarousel();
+
+    function startCarousel() {
+      new bootstrap.Carousel(carousel, {
+        interval: 4000,
+        ride: "carousel",
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
+
