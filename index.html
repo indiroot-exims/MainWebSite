@@ -26,7 +26,9 @@
 
 <body>
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader">
+  <span>Loading...</span>
+</div>
 
   <!-- HEADER PLACEHOLDER -->
   <div id="header"></div>
@@ -171,8 +173,11 @@
   <!-- Preloader Hide Script -->
   <script>
     window.addEventListener('load', function () {
-      document.body.classList.add('loaded');
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
     });
   </script>
 </body>
 </html>
+
