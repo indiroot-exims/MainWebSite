@@ -165,21 +165,41 @@
   <script defer src="Js/SearchBox.js"></script>
   <script defer src="Js/InjectLayout.js"></script>
 
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Handle image opacity on load (for hero carousel images)
     const imgs = document.querySelectorAll(".heroCarousel .carousel-item img");
+
     imgs.forEach((img) => {
-      img.addEventListener("load", () => {
-        img.style.opacity = "1";
-      });
+      if (img.complete) {
+        img.style.opacity = "1"; // Already loaded
+      } else {
+        img.addEventListener("load", () => {
+          img.style.opacity = "1";
+        });
+      }
+    });
+
+    // Apply lazy loading to all images
+    document.querySelectorAll("img").forEach(function (img) {
+      if (!img.classList.contains("lazyload")) {
+        img.setAttribute("data-src", img.getAttribute("src"));
+        img.removeAttribute("src");
+        img.classList.add("lazyload");
+      }
     });
   });
 </script>
+<script src="js/lazysizes.min.js" async></script>
+
+
+
 
 
   <!-- Removed preloader script -->
 </body>
 </html>
+
 
 
 
