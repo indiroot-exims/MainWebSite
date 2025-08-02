@@ -139,11 +139,14 @@
 
 .apeda-logo {
   max-height: 60px;
+  max-width:200px !important;
   width: auto;
   display: inline-block;
+  margin-left:75px;
 }
 
 /* Optional: Ensure alignment in grid stays even if content varies slightly */
 .cert-box h5 {
   min-height: 48px;
 }
+
