@@ -152,6 +152,7 @@ button[type="submit"]:hover {
     margin: 10px 0;
     transform: none !important;
     padding: 20px !important;
+      text-align: center;
   }
 
   .contact-form-card form {
@@ -171,3 +172,4 @@ button[type="submit"]:hover {
     width: 100%;
   }
 }
+
