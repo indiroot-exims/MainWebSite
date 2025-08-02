@@ -1,4 +1,4 @@
-/* General Styles for Contact Section */
+/* Fullscreen Contact Section */
 .contact-fullscreen {
   position: relative;
   min-height: 100vh;
@@ -18,7 +18,7 @@
   z-index: 1;
 }
 
-/* Info Card and Contact Form Card */
+/* Cards */
 .info-card, .contact-form-card {
   position: relative;
   z-index: 2;
@@ -30,19 +30,17 @@
   transition: all 0.3s ease;
 }
 
-/* Backgrounds */
 .info-card {
   background: rgba(0, 0, 0, 0.8);
-  transform: translateX(40px);
   color: #fff;
+  transform: none;
 }
 
 .contact-form-card {
   background: rgba(255, 255, 255, 0.95);
-  transform: translateX(-40px);
+  transform: none;
 }
 
-/* Hover effect */
 .info-card:hover, .contact-form-card:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
@@ -51,27 +49,36 @@
   color: #fff;
 }
 
-/* Buttons */
+/* Button Colors */
 .text-orange {
   color: #ff6e40;
 }
 
-.btn-orange {
+.btn-orange,
+button[type="submit"] {
   background-color: #ff6e40;
   color: white;
   transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.btn-orange:hover {
+.btn-orange:hover,
+button[type="submit"]:hover {
   background-color: #ff3d00;
 }
 
-/* Form controls */
+/* Inputs */
 textarea.form-control,
 input.form-control,
 select.form-control {
   box-shadow: none;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   transition: all 0.3s ease-in-out;
 }
 
@@ -82,7 +89,7 @@ select.form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 110, 64, 0.25);
 }
 
-/* Contact Section */
+/* Section Specific */
 #contact {
   padding: 60px 0;
   background-image: url('../Images/pexels-pixabay-326576.jpg');
@@ -93,53 +100,26 @@ select.form-control:focus {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 30px;
 }
 
-#contact .container .info-card {
+#contact .info-card {
   flex: 1 1 40%;
-  margin-top: 50px;
   background: #111;
   color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-#contact .container .contact-form-card {
-  flex: 1 1 55%;
+#contact .contact-form-card {
+  flex: 1 1 58%;
   background: #fff;
-  margin-top: 20px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-#contact .container .contact-form-card h2 {
+#contact .contact-form-card h2 {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Button Styles */
-button[type="submit"] {
-  margin-left: 20%;
-  width: 50%;
-  padding: 15px;
-  background: #ff6b35;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #ff3d00;
-}
-
-/* ---------------------------------------
-   Responsive Design (Mobile/Tablet)
------------------------------------------- */
+/* Responsive */
 @media (max-width: 768px) {
   #contact .container {
     flex-direction: column;
@@ -147,12 +127,13 @@ button[type="submit"]:hover {
     padding: 20px;
   }
 
-  .info-card, .contact-form-card {
+  .info-card,
+  .contact-form-card {
     width: 100% !important;
     margin: 10px 0;
     transform: none !important;
     padding: 20px !important;
-      text-align: center;
+    text-align: center;
   }
 
   .contact-form-card form {
@@ -166,10 +147,4 @@ button[type="submit"]:hover {
     width: 100% !important;
     margin: 8px 0 !important;
   }
-
-  button[type="submit"] {
-    margin-left: 0;
-    width: 100%;
-  }
 }
-
