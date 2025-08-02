@@ -162,13 +162,43 @@
    
   </div>
 </div>
-
+<!-- Footer -->
+<div id="footer"></div>
 <!-- Scripts -->
 <script src="Js/bootstrap.bundle.min.js"></script>
 <script src="Js/SearchBox.js"></script>
 <script src="Js/InjectLayout.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Only apply opacity transition fix if .heroCarousel exists
+    const carouselImgs = document.querySelectorAll(".heroCarousel .carousel-item img");
+    if (carouselImgs.length > 0) {
+      carouselImgs.forEach((img) => {
+        if (img.complete) {
+          img.style.opacity = "1";
+        } else {
+          img.addEventListener("load", () => {
+            img.style.opacity = "1";
+          });
+        }
+      });
+    }
 
-<!-- Footer -->
-<div id="footer"></div>
+    // Lazy load all images (skip already processed ones)
+    document.querySelectorAll("img").forEach(function (img) {
+      if (!img.classList.contains("lazyload")) {
+        img.setAttribute("data-src", img.getAttribute("src"));
+        img.removeAttribute("src");
+        img.classList.add("lazyload");
+      }
+    });
+  });
+</script>
+
+<!-- Load lazysizes library -->
+<script src="Js/lazysizes.min.js" async></script>
+
+
 </body>
 </html>
+
