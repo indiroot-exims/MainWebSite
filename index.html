@@ -156,6 +156,19 @@
   <script defer src="Js/SearchBox.js"></script>
   <script defer src="Js/InjectLayout.js"></script>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const imgs = document.querySelectorAll(".heroCarousel .carousel-item img");
+    imgs.forEach((img) => {
+      img.addEventListener("load", () => {
+        img.style.opacity = "1";
+      });
+    });
+  });
+</script>
+
+
   <!-- Removed preloader script -->
 </body>
 </html>
+
