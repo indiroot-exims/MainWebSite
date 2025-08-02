@@ -21,47 +21,48 @@
 
 <div id="header"></div>
 <!-- Contact Section -->
-<section id="contact" class="contact-fullscreen">
+<section id="contact" class="contact-fullscreen py-5">
   <div class="container">
-    
-    <!-- Left Side - Contact Info -->
-    <div class="info-card">
-      <h2>Email Address</h2>
-      <p><i class="fa fa-envelope"></i> info@indirootexims.com</p>
+    <div class="row justify-content-center align-items-start g-4">
       
-      <h2>Location</h2>
-      <p style="max-width: 450px;"><strong>Registered Office:</strong><br>
-      TF-344 Aristo , Opp SHANGHANI SKYZ ,Bhayli 391410, Vadodara , Gujarat  India.</p>
+      <!-- Left Side -->
+      <div class="col-md-6 col-12">
+        <div class="info-card p-4 bg-dark text-white rounded shadow-sm h-100">
+          <h2>Email Address</h2>
+          <p><i class="fa fa-envelope"></i> info@indirootexims.com</p>
 
-      <p><strong>Corporate Office:</strong><br>
-      <p>Phone: +91-8866402765</p>
+          <h2>Location</h2>
+          <p><strong>Registered Office:</strong><br>
+          TF-344 Aristo, Opp SHANGHANI SKYZ, Bhayli 391410, Vadodara, Gujarat, India.</p>
+
+          <p><strong>Corporate Office:</strong><br>
+          Phone: +91-8866402765</p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6 col-12">
+        <div class="contact-form-card p-4 bg-light rounded shadow-sm h-100">
+          <h2>Reach Us</h2>
+          <form id="contact-form">
+            <div class="mb-3">
+              <input type="text" id="name" name="name" placeholder="Your Name*" required class="form-control">
+            </div>
+            <div class="mb-3">
+              <input type="email" id="email" name="email" placeholder="Your Email" required class="form-control">
+            </div>
+            <div class="mb-3">
+              <textarea id="enquiry" name="message" placeholder="Enquiry" rows="5" required class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background-color: #313a63;">Submit</button>
+          </form>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Right Side - Contact Form -->
-    <div class="contact-form-card">
-      <h2>Reach Us</h2>
-      <form id="contact-form">
-        <div>
-          <input type="text" style="margin: 10px;" id="name" name="name" placeholder="Your Name*" required class="form-control">
-        </div>
-      
-        <div>
-          <input type="email" id="email" name="email" style="margin: 10px;" placeholder="Your Email" required class="form-control">
-        </div>
-      
-        <div>
-          <textarea id="enquiry" name="message" placeholder="Enquiry" style="margin: 10px;" rows="5" required class="form-control"></textarea>
-        </div>
-      
-        <button type="submit" class="btn-orange align-items-center" style="background-color: #313a63 !important; margin-left: 150px;">
-          Submit
-        </button>
-      </form>
-      
-    </div>
-
   </div>
 </section>
+
 
  <!-- FOOTER PLACEHOLDER -->
  <div id="footer"></div>
@@ -109,4 +110,5 @@
 <script src="Js/InjectLayout.js"></script>
 </body>
 </html>
+
 
