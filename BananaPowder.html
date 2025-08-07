@@ -24,245 +24,356 @@
   <meta property="og:image" content="https://www.indirootexims.com/Images/og-image.png" />
 
   <!-- Structured Data (JSON-LD for Products) -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Raw Green Banana Powder",
-  "image": "https://www.indirootexims.com/Images/GR-BP1.png",
-  "description": "Naturally sun-dried, budget-friendly banana powder with gut health benefits.",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "reviewCount": "18"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Aarav Mehta"
-      },
-      "datePublished": "2025-07-20",
-      "description": "Great texture and quality, works well in smoothies!",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.indirootexims.com/BananaPowder.html",
-    "priceCurrency": "INR",
-    "price": "250.00",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "IN",
-      "returnPolicyCategory": "https://schema.org/ReturnRefund",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  }
-}
-</script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Spray Dried Banana Powder",
-  "image": "https://www.indirootexims.com/Images/SD-BP1.png",
-  "description": "Made using advanced spray drying technology. Ideal for health supplements, bakery applications, and baby foods.",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "reviewCount": "22"
+  "@type": "ProductGroup",
+  "name": "Banana Powder",
+  "description": "Export-quality banana powder variants including Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic types for food and health applications.",
+  "image": "https://www.indirootexims.com/Images/BananaMain.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "IndiRoot Exims"
   },
-  "review": [
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "IndiRoot Exims"
+  },
+  "hasVariant": [
     {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Neha Singh"
+      "@type": "Product",
+      "name": "Raw Green Banana Powder",
+      "description": "Raw green banana powder made from unripe bananas, ideal for dietary and functional food uses.",
+      "image": "https://www.indirootexims.com/Images/BananaRawGreen.png",
+      "sku": "BNP-RG-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.5",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "5.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 5,
+              "maxValue": 7,
+              "unitCode": "d"
+            }
+          }
+        },
+        "returnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       },
-      "datePublished": "2025-07-15",
-      "description": "Perfect for baking – love the flavor!",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "18"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Aarav Patel"
+        },
+        "datePublished": "2025-04-20",
+        "reviewBody": "High-quality and very fine banana powder. Worked great for my smoothie blend.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Spray Dried Banana Powder",
+      "description": "Fine spray-dried banana powder with longer shelf life, perfect for instant food and baby food products.",
+      "image": "https://www.indirootexims.com/Images/BananaSpray.png",
+      "sku": "BNP-SD-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4.2",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "5.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 5,
+              "maxValue": 7,
+              "unitCode": "d"
+            }
+          }
+        },
+        "returnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "25"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Fatima Noor"
+        },
+        "datePublished": "2025-05-02",
+        "reviewBody": "Very clean and uniform powder. Easy to mix and store.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Freeze Dried Banana Powder",
+      "description": "Freeze-dried banana powder with preserved nutrients and excellent aroma, suitable for health supplements.",
+      "image": "https://www.indirootexims.com/Images/BananaFreeze.png",
+      "sku": "BNP-FD-003",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "5.8",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "5.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 5,
+              "maxValue": 7,
+              "unitCode": "d"
+            }
+          }
+        },
+        "returnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "14"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Chen"
+        },
+        "datePublished": "2025-03-15",
+        "reviewBody": "Premium quality. Excellent in nutraceutical applications.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Dehydrated Raw Banana Powder",
+      "description": "Made using traditional dehydration methods, this banana powder is rich in fiber and suitable for gluten-free diets.",
+      "image": "https://www.indirootexims.com/Images/BananaDehy.png",
+      "sku": "BNP-DR-004",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.0",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "5.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 5,
+              "maxValue": 7,
+              "unitCode": "d"
+            }
+          }
+        },
+        "returnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "reviewCount": "9"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Meena Iyer"
+        },
+        "datePublished": "2025-06-10",
+        "reviewBody": "Traditional flavor and texture. Useful for ayurvedic applications.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Organic Banana Powder",
+      "description": "Certified organic banana powder made without any chemicals or additives. Ideal for health-conscious buyers and organic product lines.",
+      "image": "https://www.indirootexims.com/Images/BananaOrganic.png",
+      "sku": "BNP-ORG-005",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4.8",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "5.00",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 5,
+              "maxValue": 7,
+              "unitCode": "d"
+            }
+          }
+        },
+        "returnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "22"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "James L."
+        },
+        "datePublished": "2025-04-02",
+        "reviewBody": "Certified and premium. Matches EU organic standards. Well-packed.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
       }
     }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.indirootexims.com/BananaPowder.html",
-    "priceCurrency": "INR",
-    "price": "250.00",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "IN",
-      "returnPolicyCategory": "https://schema.org/ReturnRefund",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  }
+  ]
 }
 </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Freeze Dried Banana Powder",
-  "image": "https://www.indirootexims.com/Images/FD-BP1.png",
-  "description": "Maximum nutrient retention. Perfect for high-nutrition applications.",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "15"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Ravi Sharma"
-      },
-      "datePublished": "2025-06-25",
-      "description": "Very fine quality and great nutritional value.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.indirootexims.com/BananaPowder.html",
-    "priceCurrency": "INR",
-    "price": "250.00",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "IN",
-      "returnPolicyCategory": "https://schema.org/ReturnRefund",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Dehydrated Raw Banana Powder",
-  "image": "https://www.indirootexims.com/Images/De-BP1.png",
-  "description": "Gluten-free and ideal for baby foods and medical nutrition.",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "reviewCount": "12"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Sneha Rao"
-      },
-      "datePublished": "2025-07-10",
-      "description": "Helpful for my baby’s digestion – highly recommend.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4",
-        "bestRating": "5"
-      }
-    }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.indirootexims.com/BananaPowder.html",
-    "priceCurrency": "INR",
-    "price": "250.00",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "IN",
-      "returnPolicyCategory": "https://schema.org/ReturnRefund",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Organic Banana Powder",
-  "image": "https://www.indirootexims.com/Images/O-BP1.png",
-  "description": "Certified organic, chemical-free banana powder suitable for export.",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "reviewCount": "20"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {
-        "@type": "Person",
-        "name": "Priya Das"
-      },
-      "datePublished": "2025-07-18",
-      "description": "Organic and fresh – perfect for my wellness brand.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      }
-    }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.indirootexims.com/BananaPowder.html",
-    "priceCurrency": "INR",
-    "price": "250.00",
-    "priceValidUntil": "2025-12-31",
-    "availability": "https://schema.org/InStock",
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "IN",
-      "returnPolicyCategory": "https://schema.org/ReturnRefund",
-      "merchantReturnDays": 7,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
-    }
-  }
-}
-</script>
 
 
   <!-- CSS Stylesheets -->
@@ -458,6 +569,7 @@
 
 </body>
 </html>
+
 
 
 
