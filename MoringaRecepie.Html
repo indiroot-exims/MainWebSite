@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moringa Recipes | IndiRoot Exims</title>
+
+  <!-- Bootstrap 5 (Offline) -->
+  <link rel="stylesheet" href="Css/bootstrap.min.css" />
+
+  <!-- Font Awesome (Offline) -->
+  <link rel="stylesheet" href="Css/all.min.css" />
+
+  <!-- Your own styles -->
+  <link rel="stylesheet" href="Css/Style1.0.2.css" />
+
+  <!-- HEADER PLACEHOLDER -->
+  <!-- Inline CSS only for recipes page -->
+  <style>
+    body {
+      background: #f8f9fa; /* light grey background */
+    }
+
+    /* Hero Section */
+    .recipes-hero {
+      text-align: center;
+      background: linear-gradient(135deg, #e9f5ec, #f5fff5);
+      padding: 60px 20px;
+      border-bottom: 4px solid #2e7d32;
+    }
+    .recipes-hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #056608;
+      font-weight: 700;
+    }
+    .recipes-hero p {
+      font-size: 18px;
+      color: #444;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Recipes List */
+    .recipes-list {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .recipe-card {
+      display: flex;
+      background: linear-gradient(135deg, #ffffff, #f9fff9);
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+      flex-wrap: wrap;
+      border-top: 6px solid #2e7d32;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .recipe-image {
+      flex: 1 1 40%;
+    }
+    .recipe-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .recipe-details {
+      flex: 1 1 60%;
+      padding: 25px;
+      background: #fff;
+    }
+    .recipe-details h2 {
+      margin-top: 0;
+      color: #2e7d32;
+      font-size: 24px;
+      border-bottom: 2px solid #e6f2e6;
+      padding-bottom: 8px;
+    }
+    .recipe-details h3 {
+      margin-bottom: 8px;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+      border-left: 4px solid #81c784;
+      padding-left: 8px;
+    }
+    .recipe-details ul,
+    .recipe-details ol {
+      margin: 0 0 15px 18px;
+    }
+    .servings-time {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .tips {
+      font-style: italic;
+      background: #f1fdf2;
+      padding: 12px;
+      border-left: 4px solid #43a047;
+      margin-top: 15px;
+      border-radius: 6px;
+      color: #2e7d32;
+    }
+
+    /* Print & Download Buttons */
+    .print-recipes {
+      text-align: center;
+      margin: 40px auto 80px;
+    }
+    .print-recipes .btn {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+    .print-recipes .btn:hover {
+      background: #e6b800;
+    }
+
+    /* Disclaimer Box */
+    .recipes-disclaimer {
+      max-width: 1000px;
+      margin: 30px auto 60px;
+      padding: 0 20px;
+    }
+    .disclaimer-box {
+      background: #fff8e1;
+      border-left: 6px solid #ff9800;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+    .disclaimer-box h3 {
+      margin-top: 0;
+      color: #d35400;
+    }
+    .disclaimer-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .recipe-card {
+        flex-direction: column;
+      }
+      .recipe-image, .recipe-details {
+        flex: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="recipes-hero">
+    <h1>Moringa Powder Recipes</h1>
+    <p>Discover tasty and healthy ways to use our organic moringa powder in your daily meals.</p>
+  </section>
+
+  <!-- Recipes -->
+  <section class="recipes-list">
+    <!-- Smoothie -->
+    <div class="recipe-card">
+      <div class="recipe-image">
+        <img src="images/MoringaLeafPowder1.jpg" alt="Moringa Smoothie">
+      </div>
+      <div class="recipe-details">
+        <h2>Moringa Smoothie</h2>
+        <p class="servings-time">Serves: 2 • Prep time: 5 mins</p>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 banana</li>
+          <li>1 tsp organic moringa powder</li>
+          <li>1 cup almond milk</li>
+          <li>1 tsp honey</li>
+        </ul>
+        <h3>Method</h3>
+        <ol>
+          <li>Add all ingredients to blender.</li>
+          <li>Blend until smooth.</li>
+          <li>Pour into glasses and enjoy chilled.</li>
+        </ol>
+        <p class="tips"><strong>Tip:</strong> Use frozen banana for extra creaminess.</p>
+      </div>
+    </div>
+
+    <!-- Tea -->
+    <div class="recipe-card">
+      <div class="recipe-image">
+        <img src="images/MoringaLeafPowder2.jpg" alt="Moringa Tea">
+      </div>
+      <div class="recipe-details">
+        <h2>Moringa Herbal Tea</h2>
+        <p class="servings-time">Serves: 1 • Prep time: 3 mins</p>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 tsp moringa powder</li>
+          <li>1 cup hot water</li>
+          <li>½ lemon (optional)</li>
+          <li>Honey to taste</li>
+        </ul>
+        <h3>Method</h3>
+        <ol>
+          <li>Mix moringa powder in hot water.</li>
+          <li>Add lemon juice and honey.</li>
+          <li>Stir well and serve warm.</li>
+        </ol>
+        <p class="tips"><strong>Tip:</strong> Add ginger slices for extra flavor and digestion benefits.</p>
+      </div>
+    </div>
+
+    <!-- Energy Balls -->
+    <div class="recipe-card">
+      <div class="recipe-image">
+        <img src="images/MoringaLeafPowder3.jpg" alt="Moringa Energy Balls">
+      </div>
+      <div class="recipe-details">
+        <h2>Moringa Energy Balls</h2>
+        <p class="servings-time">Makes: 10 balls • Prep time: 15 mins</p>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup dates (pitted)</li>
+          <li>½ cup oats</li>
+          <li>¼ cup coconut flakes</li>
+          <li>1 tsp moringa powder</li>
+        </ul>
+        <h3>Method</h3>
+        <ol>
+          <li>Blend all ingredients until sticky.</li>
+          <li>Roll into bite-sized balls.</li>
+          <li>Refrigerate for 30 mins before serving.</li>
+        </ol>
+        <p class="tips"><strong>Tip:</strong> Coat balls with cocoa powder or sesame seeds for variation.</p>
+      </div>
+    </div>
+
+    <!-- Pancakes -->
+    <div class="recipe-card">
+      <div class="recipe-image">
+        <img src="images/OurProduct-Moringa.png" alt="Moringa Pancakes">
+      </div>
+      <div class="recipe-details">
+        <h2>Moringa Pancakes</h2>
+        <p class="servings-time">Serves: 4 • Prep time: 20 mins</p>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup whole wheat flour</li>
+          <li>1 tsp baking powder</li>
+          <li>1 tbsp moringa powder</li>
+          <li>1 egg</li>
+          <li>1 cup milk</li>
+          <li>1 tbsp honey</li>
+        </ul>
+        <h3>Method</h3>
+        <ol>
+          <li>Mix dry ingredients in a bowl.</li>
+          <li>Whisk egg, milk, and honey in another bowl.</li>
+          <li>Combine mixtures and cook pancakes on a greased pan.</li>
+        </ol>
+        <p class="tips"><strong>Tip:</strong> Serve with fresh fruits or drizzle of maple syrup for added taste.</p>
+      </div>
+    </div>
+
+    <!-- Soup -->
+    <div class="recipe-card">
+      <div class="recipe-image">
+        <img src="images/MoringaLeafPowder1.jpg" alt="Moringa Soup">
+      </div>
+      <div class="recipe-details">
+        <h2>Moringa Vegetable Soup</h2>
+        <p class="servings-time">Serves: 3 • Prep time: 25 mins</p>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 tbsp olive oil</li>
+          <li>1 onion, chopped</li>
+          <li>1 carrot, diced</li>
+          <li>2 cups vegetable broth</li>
+          <li>1 tsp moringa powder</li>
+          <li>Salt & pepper to taste</li>
+        </ul>
+        <h3>Method</h3>
+        <ol>
+          <li>Sauté onion and carrot in olive oil.</li>
+          <li>Add broth and bring to a boil.</li>
+          <li>Stir in moringa powder and season with salt & pepper.</li>
+          <li>Simmer for 10 mins before serving.</li>
+        </ol>
+        <p class="tips"><strong>Tip:</strong> Add sweet corn or spinach for extra nutrition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="recipes-disclaimer">
+    <div class="disclaimer-box">
+      <h3>Disclaimer</h3>
+      <p>
+        The recipes provided on this page are for informational purposes only.  
+        Results may vary depending on individual preparation and dietary needs.  
+        Always consult a qualified healthcare professional if you have any medical conditions,  
+        allergies, or dietary restrictions before consuming moringa or any new food product.  
+        <br><br>
+        IndiRoot Exims is not responsible for any adverse effects resulting from the use of these recipes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Print / Download -->
+  <section class="print-recipes">
+    <button onclick="window.print();" class="btn">Print Recipes</button>
+    <a href="recipes.pdf" class="btn">Download PDF</a>
+  </section>
+
+  <!-- FOOTER PLACEHOLDER -->
+  <div id="footer"></div>
+
+  <!--JS Bundle (Offline) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/SearchBox.js"></script>
+  <script src="js/InjectLayout.js"></script>
+</body>
+</html>
