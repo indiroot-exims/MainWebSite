@@ -1,3 +1,4 @@
+/* ================== BACKGROUND ================== */
 .bg-product-section {
   background-image: url(../Images/ProductBacjGround1.0.2.jpg);
   background-size: cover;
@@ -14,43 +15,90 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.2; /* Corrected from 0.2px */
+  background-color: rgba(0, 0, 0, 0.25); /* subtle dark overlay for better readability */
   z-index: -1;
 }
 
-/* Reusable button styling */
+/* ================== BUTTONS ================== */
 .btn-orange {
   background-color: #313a63;
-  color: white;
+  color: #ffffff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .btn-orange:hover {
   background-color: #ef6c00;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Card image control */
-.card-img-top,
-.card img {
-  max-height: 180px;
+/* ================== CARD STYLING ================== */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  min-height: 250px;
   object-fit: cover;
+  background: #f6f6f6;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
 
-/* Carousel arrows centered vertically */
-.carousel-control-prev,
-.carousel-control-next {
-  top: 50%;
-  transform: translateY(-50%);
+.card-img-top:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
-/* Animation keyframes */
+/* Card body and variant list */
+.card-body {
+  padding: 15px 10px;
+}
+
+.variant-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.variant-list li {
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Premium hover effect for variants */
+.card:hover .variant-list li {
+  background-color: rgba(239, 108, 0, 0.1);
+  color: #313a63;
+  transform: translateX(5px);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== ANIMATIONS ================== */
 @keyframes slideInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-80px);
   }
   100% {
     opacity: 1;
@@ -61,7 +109,7 @@
 @keyframes slideInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(80px);
   }
   100% {
     opacity: 1;
@@ -71,12 +119,74 @@
 
 .animate-left {
   opacity: 0;
-  animation: slideInLeft 2s ease forwards;
+  animation: slideInLeft 1.5s ease forwards;
 }
 
 .animate-right {
   opacity: 0;
-  animation: slideInRight 2s ease forwards;
+  animation: slideInRight 1.5s ease forwards;
+}
+
+/* ================== HEADINGS ================== */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 992px) {
+  .card-img-top {
+    min-height: 200px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    min-height: 180px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .btn-orange {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    min-height: 150px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .btn-orange {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .animate-left,
+  .animate-right {
+    animation-duration: 1.2s;
+  }
+}
+
+/* ================== EXTRA STYLING ================== */
+.blur {
+  filter: blur(3px);
+  opacity: 0.6;
+}
+
+.card-img-overlay h5 {
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 5px;
 }
 
 .main-image {
@@ -84,69 +194,3 @@
   display: block;
   margin: 0 auto;
 }
-
-/* ================== RESPONSIVE STYLES ================== */
-@media (max-width: 992px) {
-  .card-img-top,
-  .card img {
-    max-height: 150px;
-  }
-
-  .main-image {
-    width: 90% !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-image {
-    width: 95% !important;
-  }
-
-  .btn-orange {
-    padding: 6px 14px;
-    font-size: 14px;
-  }
-
-  .card-img-top,
-  .card img {
-    max-height: 130px;
-  }
-}
-
-@media (max-width: 576px) {
-  .main-image {
-    width: 100% !important;
-  }
-
-  .btn-orange {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-
-  .card-img-top,
-  .card img {
-    max-height: 120px;
-  }
-
-  .animate-left,
-  .animate-right {
-    animation-duration: 1.2s;
-  }
-}
- .blur {
-      filter: blur(3px);
-      opacity: 0.6;
-    }
-    .card-img-overlay h5 {
-      font-size: 1.2rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 6px 12px;
-      border-radius: 5px;
-    }
-    .card-img-top {
-      min-height: 250px;
-      object-fit: cover;
-      background: #f6f6f6;
-      transition: opacity 0.3s ease-in-out;
-    }
-
