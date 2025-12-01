@@ -2,10 +2,12 @@
 const products = [
     { name: "Banana Powder", url: "BananaPowder.html" },
     { name: "Moringa Powder", url: "MoringaPowder.html" },
-    { name: "JackFruit Powder", url: "JackfruitPowder.html" },
-    { name: "Jamun Powder", url: "Jamunpowder.html" },
-    { name: "Ragi Powder", url: "RagiPowder.html" },
-    { name: "Papaya Powder", url: "PapayaPowder.html" },
+    { name: "Amla Powder", url: "Amlapowder.html" },
+    { name: "Beatroot Powder", url: "BeatrootPowder.html" },
+    { name: "Lemongrass Powder", url: "Lemongrass.html" },
+    { name: "Neem Powder", url: "NeemPowder.html" },
+{ name: "Wheatgrass Powder", url: "WheatgrassPowder.html" },
+    
     // Add more products and URLs as needed
   ];
   
@@ -77,4 +79,5 @@ const products = [
       document.getElementById("search-icon").style.display = "block";
     }
   });
+
   
