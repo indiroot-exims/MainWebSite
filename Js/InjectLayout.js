@@ -100,12 +100,14 @@ function buildBreadcrumb() {
     return;
   }
 
-  // Fallback: just show last segment as active label
-  const last = segments[segments.length - 1].replace(".html", "");
-  const lastLabel = last
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, c => c.toUpperCase());
-  addItem({ label: lastLabel, active: true });
+  // Fallback: only if we actually have segments
+  if (segments.length > 0) {
+    const last = segments[segments.length - 1].replace(".html", "");
+    const lastLabel = last
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, c => c.toUpperCase());
+    addItem({ label: lastLabel, active: true });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
