@@ -23,13 +23,16 @@ function buildBreadcrumb() {
 
   const breadcrumbNav = ol.closest('nav[aria-label="breadcrumb"]');
 
-  const path = window.location.pathname.replace(/\/+$/, ""); // remove trailing /
+  // Normalise path, ensure root stays as "/"
+  let path = window.location.pathname || "/";
+  path = path === "/" ? "/" : path.replace(/\/+$/, "");
+
   const segments = path.split("/").filter(Boolean); // e.g. ["blog","organic-moringa-powder-benefits.html"]
 
   // Pages where breadcrumb bar should be completely hidden
   const hideOnPaths = [
-    "/",              // root
-    "/index.html"     // explicit home
+    "/",          // www.indirootexims.com
+    "/index.html" // direct index.html if ever hit
     // add more if you want: "/AboutUs.html", "/OurProduct.html"
   ];
 
