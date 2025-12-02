@@ -21,11 +21,27 @@ function buildBreadcrumb() {
   const ol = document.getElementById("breadcrumb");
   if (!ol) return;
 
-  // Clear if anything exists
-  ol.innerHTML = "";
+  const breadcrumbNav = ol.closest('nav[aria-label="breadcrumb"]');
 
   const path = window.location.pathname.replace(/\/+$/, ""); // remove trailing /
   const segments = path.split("/").filter(Boolean); // e.g. ["blog","organic-moringa-powder-benefits.html"]
+
+  // Pages where breadcrumb bar should be completely hidden
+  const hideOnPaths = [
+    "/",              // root
+    "/index.html"     // explicit home
+    // add more if you want: "/AboutUs.html", "/OurProduct.html"
+  ];
+
+  if (hideOnPaths.includes(path)) {
+    if (breadcrumbNav) breadcrumbNav.style.display = "none";
+    return;
+  } else {
+    if (breadcrumbNav) breadcrumbNav.style.display = "";
+  }
+
+  // Clear if anything exists
+  ol.innerHTML = "";
 
   function addItem(options) {
     const { label, href, active } = options;
@@ -45,11 +61,6 @@ function buildBreadcrumb() {
 
   // Always start with Home
   addItem({ label: "Home", href: "/" });
-
-  if (path === "/" || segments.length === 0) {
-    // Home page only
-    return;
-  }
 
   // Blog index
   if (path === "/blog" || path === "/blog/index.html") {
@@ -103,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHTML("#header", "/Header.html"),
     loadHTML("#footer", "/Footer.html")
   ]).then(() => {
-    // After header is injected, build breadcrumb into <ol id="breadcrumb"> in Header.html
     buildBreadcrumb();
   });
 });
