@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>IndiRoot Exims Blog – Plant-Based Ingredient Insights & Export Guides</title>
+
+  <meta name="description" content="Read ingredient insights and export-focused articles on banana, moringa, lemongrass, amla and other plant-based powders from IndiRoot Exims." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://www.indirootexims.com/blog/index.html" />
+
+  <link rel="icon" href="/Images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IndiRoot Exims Blog – Plant-Based Ingredient Insights & Export Guides" />
+  <meta property="og:site_name" content="IndiRoot Exims" />
+  <meta property="og:url" content="https://www.indirootexims.com/blog/index.html" />
+  <meta property="og:description" content="Technical and commercial insights on plant-based powders for food, beverage and nutraceutical brands worldwide." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.indirootexims.com/Images/og-image.png" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/Css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/Css/all.min.css" />
+  <link rel="stylesheet" href="/Css/Style1.0.2.css" />
+  <link rel="stylesheet" href="/Css/ProductDetails.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <main class="container py-5" role="main" aria-label="IndiRoot Exims Blog">
+    <h1 class="mb-4 text-center">IndiRoot Exims Blog</h1>
+    <p class="text-center text-muted mb-5">
+      Insights on plant-based powders, drying technologies, and export requirements for food, beverage, and nutraceutical brands.
+    </p>
+
+    <div class="row gy-4" style="max-width: 1000px; margin: 0 auto;">
+      <!-- Blog card: Organic Moringa Powder -->
+      <div class="col-12">
+        <article class="card shadow-sm border-0">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="/Images/Blog/organic-moringa-powder-thumb.jpg"
+                   alt="Organic moringa powder blog post thumbnail"
+                   class="img-fluid product-image" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-uppercase text-muted small mb-1">Ingredient Insight</p>
+                <h2 class="h5 card-title mb-2">
+                  <a href="organic-moringa-powder-benefits.html">
+                    Benefits & Uses of Organic Moringa Powder for Global Brands
+                  </a>
+                </h2>
+                <p class="card-text mb-2">
+                  Overview of nutrition, health-supportive properties, and formulation ideas using organic moringa leaf powder in foods, beverages, and nutraceuticals.
+                </p>
+                <p class="text-muted small mb-2">Published: 02 Dec 2025</p>
+                <a href="organic-moringa-powder-benefits.html" class="custom-btn" aria-label="Read benefits of organic moringa powder article">
+                  📖 Read Article
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Future posts: duplicate this block and adjust content/links -->
+      <!--
+      <div class="col-12">
+        <article class="card shadow-sm border-0">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-4 text-center">
+              <img src="/Images/Blog/lemongrass-tea-thumb.jpg"
+                   alt="Shade dried lemongrass powder blog post thumbnail"
+                   class="img-fluid product-image" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="text-uppercase text-muted small mb-1">Ingredient Insight</p>
+                <h2 class="h5 card-title mb-2">
+                  <a href="shade-dried-lemongrass-powder-teas.html">
+                    Shade-Dried Lemongrass Powder for Herbal Teas & Infusions
+                  </a>
+                </h2>
+                <p class="card-text mb-2">
+                  How shade-dried lemongrass powder helps tea and wellness brands achieve superior aroma and clean-label positioning.
+                </p>
+                <p class="text-muted small mb-2">Published: DD MMM YYYY</p>
+                <a href="shade-dried-lemongrass-powder-teas.html" class="custom-btn">
+                  📖 Read Article
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      -->
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/Js/bootstrap.bundle.min.js" defer></script>
+  <script src="/Js/SearchBox.js" defer></script>
+  <script src="/Js/InjectLayout.js" defer></script>
+  <script src="/Js/lazysizes.min.js" async></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const allImgs = Array.from(document.querySelectorAll("img"));
+      allImgs.forEach(function (img, index) {
+        if (img.classList.contains("lazyload")) return;
+
+        const firstProdImgIndex = allImgs.findIndex(i => i.classList.contains("product-image"));
+        const isFirstProdImg = index === firstProdImgIndex;
+
+        if (isFirstProdImg) return;
+
+        const currSrc = img.getAttribute("src");
+        if (currSrc) {
+          img.setAttribute("data-src", currSrc);
+          img.removeAttribute("src");
+          img.classList.add("lazyload");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
