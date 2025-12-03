@@ -27,20 +27,21 @@ function buildBreadcrumb() {
   let path = window.location.pathname || "/";
   path = path === "/" ? "/" : path.replace(/\/+$/, "");
 
-  const segments = path.split("/").filter(Boolean); // e.g. ["blog","organic-moringa-powder-benefits.html"]
+  const segments = path.split("/").filter(Boolean); // e.g. ["BananaPowder.html"]
+  const fileName = segments.length > 0 ? segments[segments.length - 1] : "";
+  const fileNameLower = fileName.toLowerCase();
 
   // Pages where breadcrumb bar should be completely hidden
   const hideOnPaths = [
-    "/",          // www.indirootexims.com
+    "/",          // root
     "/index.html" // direct index.html if ever hit
-    // add more if you want: "/AboutUs.html", "/OurProduct.html"
   ];
 
   if (hideOnPaths.includes(path)) {
     if (breadcrumbNav) breadcrumbNav.style.display = "none";
     return;
-  } else {
-    if (breadcrumbNav) breadcrumbNav.style.display = "";
+  } else if (breadcrumbNav) {
+    breadcrumbNav.style.display = "";
   }
 
   // Clear if anything exists
@@ -71,12 +72,12 @@ function buildBreadcrumb() {
     return;
   }
 
-  // Blog post: /blog/slug.html
-  if (segments[0] === "blog" && segments.length === 2) {
+  // Blog post: any file under /blog/ that is not index.html
+  if (segments[0] && segments[0].toLowerCase() === "blog" && fileNameLower !== "index.html") {
     addItem({ label: "Blog", href: "/blog/index.html" });
 
-    const file = segments[1].replace(".html", "");
-    const label = file
+    const base = fileName.replace(".html", "");
+    const label = base
       .replace(/-/g, " ")
       .replace(/\b\w/g, c => c.toUpperCase());
 
@@ -90,12 +91,23 @@ function buildBreadcrumb() {
     return;
   }
 
-  // Product detail: /products/slug.html
-  if (segments[0] === "products" && segments.length === 2) {
+  // Product detail page: single HTML file in root that is not home/about/contact/etc.
+  const productDetailFiles = [
+    "bananapowder.html",
+    "lemongrass.html",
+    "moringapowder.html",
+    "amlapowder.html",
+    "beatrootpowder.html",
+    "neempowder.html",
+    "wheatgrasspowder.html"
+    // add other product detail file names here, all lowercase
+  ];
+
+  if (productDetailFiles.includes(fileNameLower)) {
     addItem({ label: "Products", href: "/OurProduct.html" });
 
-    const file = segments[1].replace(".html", "");
-    const label = file
+    const base = fileName.replace(".html", "");
+    const label = base
       .replace(/-/g, " ")
       .replace(/\b\w/g, c => c.toUpperCase());
 
@@ -105,7 +117,7 @@ function buildBreadcrumb() {
 
   // Fallback: only if we actually have segments
   if (segments.length > 0) {
-    const last = segments[segments.length - 1].replace(".html", "");
+    const last = fileName.replace(".html", "");
     const lastLabel = last
       .replace(/-/g, " ")
       .replace(/\b\w/g, c => c.toUpperCase());
@@ -114,7 +126,6 @@ function buildBreadcrumb() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Load header and footer from site root so it works in /blog/, /products/, etc.
   Promise.all([
     loadHTML("#header", "/Header.html"),
     loadHTML("#footer", "/Footer.html")
