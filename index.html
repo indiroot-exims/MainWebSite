@@ -155,55 +155,73 @@
   </section>
 
   <!-- PRODUCTS GRID -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Our Key Products</h2>
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-card img {
+    max-height: 140px;
+    object-fit: contain;
+  }
+</style>
 
-      <div class="d-flex justify-content-center flex-wrap gap-3">
-        <div class="card product-card text-center" style="width:220px;">
-          <img src="Images/OurProduct-BananaPowder.png" alt="Banana Powder exporter from India - raw organic freeze dried" loading="lazy">
-          <div class="card-body">
-            <a href="BananaPowder.html" class="stretched-link"><h3 class="h6 mb-0">Banana Powder</h3></a>
-            <p class="small text-muted mt-1">Raw / Dehydrated / Spray-dried / Freeze-dried / Organic</p>
-          </div>
-        </div>
+<!-- PRODUCTS GRID -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Key Products</h2>
 
-        <div class="card product-card text-center" style="width:220px;">
-          <img src="Images/OurProduct-Moringa2.png" alt="Moringa Powder exporter India - organic leaf powder supplier" loading="lazy">
-          <div class="card-body">
-            <a href="MoringaPowder.html" class="stretched-link"><h3 class="h6 mb-0">Moringa Powder</h3></a>
-            <p class="small text-muted mt-1">Organic & Conventional leaf powder</p>
-          </div>
-        </div>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
 
-        <div class="card product-card text-center" style="width:220px;">
-          <img src="Images/Beatroot-Ourproducts.png" alt="Beetroot Powder exporter India - natural ingredient" loading="lazy">
-          <div class="card-body">
-            <a href="BeatrootPowder.html" class="stretched-link"><h3 class="h6 mb-0">Beetroot Powder</h3></a>
-            <p class="small text-muted mt-1">Spray-dried, food-grade</p>
-          </div>
-        </div>
-
-        <div class="card product-card text-center" style="width:220px;">
-          <img src="Images/WheatgrassPowder-OurProduct.png" alt="Wheatgrass Powder exporter India - organic" loading="lazy">
-          <div class="card-body">
-            <a href="WheatgrassPowder.html" class="stretched-link"><h3 class="h6 mb-0">Wheatgrass Powder</h3></a>
-            <p class="small text-muted mt-1">Organic & spray-dried</p>
-          </div>
-        <div class="card product-card text-center" style="width:220px;">
-          <img src="Images/Lemongrass-OurProduct.png" alt="Lemongrass Powder exporter India - organic" loading="lazy">
-          <div class="card-body">
-            <a href="WheatgrassPowder.html" class="stretched-link"><h3 class="h6 mb-0">emongrass Powder</h3></a>
-            <p class="small text-muted mt-1">Hot-air dried & spray-dried</p>
-          </div>
+      <div class="card product-card text-center" style="width:220px;">
+        <img src="Images/OurProduct-BananaPowder.png" alt="Banana Powder exporter from India - raw organic freeze dried" loading="lazy">
+        <div class="card-body">
+          <a href="BananaPowder.html" class="stretched-link"><h3 class="h6 mb-0">Banana Powder</h3></a>
+          <p class="small text-muted mt-1">Raw / Dehydrated / Spray-dried / Freeze-dried / Organic</p>
         </div>
       </div>
 
-      <div class="text-center mt-4">
-        <a href="OurProduct.html" class="btn btn-outline-primary">View All Products</a>
+      <div class="card product-card text-center" style="width:220px;">
+        <img src="Images/OurProduct-Moringa2.png" alt="Moringa Powder exporter India - organic leaf powder supplier" loading="lazy">
+        <div class="card-body">
+          <a href="MoringaPowder.html" class="stretched-link"><h3 class="h6 mb-0">Moringa Powder</h3></a>
+          <p class="small text-muted mt-1">Organic & Conventional leaf powder</p>
+        </div>
       </div>
+
+      <div class="card product-card text-center" style="width:220px;">
+        <img src="Images/Beatroot-Ourproducts.png" alt="Beetroot Powder exporter India - natural ingredient" loading="lazy">
+        <div class="card-body">
+          <a href="BeatrootPowder.html" class="stretched-link"><h3 class="h6 mb-0">Beetroot Powder</h3></a>
+          <p class="small text-muted mt-1">Spray-dried, food-grade</p>
+        </div>
+      </div>
+
+      <div class="card product-card text-center" style="width:220px;">
+        <img src="Images/WheatgrassPowder-OurProduct.png" alt="Wheatgrass Powder exporter India - organic" loading="lazy">
+        <div class="card-body">
+          <a href="WheatgrassPowder.html" class="stretched-link"><h3 class="h6 mb-0">Wheatgrass Powder</h3></a>
+          <p class="small text-muted mt-1">Organic & spray-dried</p>
+        </div>
+      </div>
+
+      <div class="card product-card text-center" style="width:220px;">
+        <img src="Images/Lemongrass-OurProduct.png" alt="Lemongrass Powder exporter India - organic" loading="lazy">
+        <div class="card-body">
+          <a href="LemongrassPowder.html" class="stretched-link"><h3 class="h6 mb-0">Lemongrass Powder</h3></a>
+          <p class="small text-muted mt-1">Hot-air dried & spray-dried</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+    <div class="text-center mt-4">
+      <a href="OurProduct.html" class="btn btn-outline-primary">View All Products</a>
+    </div>
+  </div>
+</section>
+
 
   <!-- WHY CHOOSE US + TRUST -->
   <section class="py-5" style="background:#f5f0c4;">
@@ -341,3 +359,4 @@
   <script src="Js/lazysizes.min.js" async></script>
 </body>
 </html>
+
