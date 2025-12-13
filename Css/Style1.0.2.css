@@ -34,7 +34,9 @@
   transform: scale(1.02);
 }
 
-.heroCarousel .carousel-caption {
+/* main caption styling used on all slides */
+.heroCarousel .carousel-caption,
+.hero-caption {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,8 +48,14 @@
   text-align: center;
   z-index: 10;
   max-width: 80%;
+  display: inline-block;
 }
 
+/* special class if you want to target first slide separately */
+.hero-caption-first {
+}
+
+/* caption text animation */
 .heroCarousel .carousel-caption h1,
 .heroCarousel .carousel-caption p {
   opacity: 0;
@@ -97,6 +105,33 @@
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+}
+
+/* ====== HOMEPAGE STYLES (MOVED FROM INLINE) ====== */
+
+/* product cards on home page */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card img {
+  height: 170px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* country grid cards */
+.country-grid .card {
+  min-height: 160px;
+}
+
+/* compact lead paragraph container */
+.lead-compact {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* ==== FOOTER STYLING ==== */
@@ -200,7 +235,8 @@
     height: 600px;
     min-height: 600px;
   }
-  .heroCarousel .carousel-caption {
+  .heroCarousel .carousel-caption,
+  .hero-caption {
     padding: 15px 25px;
     max-width: 90%;
   }
@@ -221,7 +257,8 @@
     height: 480px;
     min-height: 480px;
   }
-  .heroCarousel .carousel-caption {
+  .heroCarousel .carousel-caption,
+  .hero-caption {
     padding: 12px 20px;
     max-width: 95%;
   }
@@ -231,19 +268,47 @@
   .heroCarousel .carousel-caption p {
     font-size: 0.95rem;
   }
+
+  /* first slide caption – avoid hiding under header on small screens */
+  .hero-caption-first {
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .product-card img {
+    height: 130px;
+  }
+
+  .country-grid .card {
+    min-height: auto;
+  }
+
+  .lead-compact {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     padding: 0 15px;
   }
+
   .navbar-collapse {
     flex-direction: column;
     align-items: flex-start;
   }
+
   #searchProduct.expanded {
     width: 100%;
   }
+
   #search-icon {
     top: 10px;
     right: 10px;
