@@ -34,7 +34,7 @@
   transform: scale(1.02);
 }
 
-/* main caption styling used on all slides */
+/* main caption styling used on all slides (desktop + base) */
 .heroCarousel .carousel-caption,
 .hero-caption {
   position: absolute;
@@ -51,7 +51,7 @@
   display: inline-block;
 }
 
-/* special class if you want to target first slide separately */
+/* first slide – only modified inside mobile media query */
 .hero-caption-first {
 }
 
@@ -269,7 +269,7 @@
     font-size: 0.95rem;
   }
 
-  /* first slide caption – avoid hiding under header on small screens */
+  /* first slide caption – avoid hiding under header on small screens ONLY */
   .hero-caption-first {
     top: 22%;
     left: 50%;
