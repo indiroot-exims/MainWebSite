@@ -42,82 +42,95 @@
 
   <!-- Structured Data (Product Group and Organization + Website + Breadcrumb) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProductGroup",
-    "name": "Beetroot Powder",
-    "description": "Premium quality beetroot powder variants: Organic, Dehydrated, and Spray Dried. Suitable for food processing, nutrition, beverage, and supplement industries.",
-    "image": "https://www.indirootexims.com/Images/BeetrootMain.png",
-    "brand": {
-      "@type": "Brand",
-      "name": "IndiRoot Exims"
-    },
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "IndiRoot Exims"
-    },
-    "hasVariant": [
-      {
-        "@type": "Product",
-        "name": "Dehydrated Beetroot Powder",
-        "description": "Made by gently drying fresh Indian beetroot at low temperatures to preserve color, flavor, and nutrients. Suitable for ready mixes, snacks, and health drinks.",
-        "image": "https://www.indirootexims.com/Images/Dehydrated-Beetroot.png",
-        "sku": "BTP-DE-001",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "6.0",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "17"
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "name": "Beetroot Powder",
+  "description": "Premium quality beetroot powder variants: Organic, Dehydrated, and Spray Dried. Suitable for food processing, nutrition, beverage, and supplement industries.",
+  "image": "https://www.indirootexims.com/Images/BeetrootMain.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "IndiRoot Exims"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "IndiRoot Exims"
+  },
+  /* ADDED: Summary price range for the group */
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "6.0",
+    "highPrice": "8.5",
+    "priceCurrency": "USD",
+    "offerCount": "3"
+  },
+  /* ADDED: Summary rating for the group */
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "74"
+  },
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "Dehydrated Beetroot Powder",
+      "description": "Made by gently drying fresh Indian beetroot at low temperatures to preserve color, flavor, and nutrients. Suitable for ready mixes, snacks, and health drinks.",
+      "image": "https://www.indirootexims.com/Images/Dehydrated-Beetroot.png",
+      "sku": "BTP-DE-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "6.0",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock"
       },
-      {
-        "@type": "Product",
-        "name": "Spray Dried Beetroot Powder",
-        "description": "Finely milled beetroot powder made by advanced spray drying for a free-flowing, versatile and instant-dissolving powder. Used in juices, beverages, and food formulations.",
-        "image": "https://www.indirootexims.com/Images/SprayDried-Beetroot.png",
-        "sku": "BTP-SD-002",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "7.2",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "21"
-        }
-      },
-      {
-        "@type": "Product",
-        "name": "Organic Beetroot Powder",
-        "description": "Certified organic beetroot powder. No chemicals, fertilizers, or additives. Ideal for clean-label nutrition, organic beverage brands, and health supplements.",
-        "image": "https://www.indirootexims.com/Images/Organic-Beetroot.png",
-        "sku": "BTP-ORG-003",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "8.5",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "36"
-        }
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "17"
       }
-    ]
-  }
-  </script>
-
+    },
+    {
+      "@type": "Product",
+      "name": "Spray Dried Beetroot Powder",
+      "description": "Finely milled beetroot powder made by advanced spray drying for a free-flowing, versatile and instant-dissolving powder. Used in juices, beverages, and food formulations.",
+      "image": "https://www.indirootexims.com/Images/SprayDried-Beetroot.png",
+      "sku": "BTP-SD-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "7.2",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "21"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Organic Beetroot Powder",
+      "description": "Certified organic beetroot powder. No chemicals, fertilizers, or additives. Ideal for clean-label nutrition, organic beverage brands, and health supplements.",
+      "image": "https://www.indirootexims.com/Images/Organic-Beetroot.png",
+      "sku": "BTP-ORG-003",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "8.5",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "36"
+      }
+    }
+  ]
+}
+</script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
