@@ -42,62 +42,78 @@
 
   <!-- Structured Data (Product Group and Organization + Website + Breadcrumb) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProductGroup",
-    "name": "Amla Powder",
-    "description": "Premium export-quality Amla (Emblica officinalis) powder available in Shade Dried and Hot Air–Oven Dried variants, used in ayurveda, cosmetics, herbal supplements, and food applications.",
-    "image": "https://www.indirootexims.com/Images/AmlaMain.png",
-    "brand": {
-      "@type": "Brand",
-      "name": "IndiRoot Exims"
-    },
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "IndiRoot Exims"
-    },
-    "hasVariant": [
-      {
-        "@type": "Product",
-        "name": "Shade Dried Amla Powder",
-        "description": "Shade dried Amla powder with maximum vitamin C retention, ideal for ayurvedic formulations, hair care, and nutraceutical applications.",
-        "image": "https://www.indirootexims.com/Images/SD-AMLA1.png",
-        "sku": "AML-SD-001",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "3.8",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "28"
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "name": "Amla Powder",
+  "description": "Premium export-quality Amla (Emblica officinalis) powder available in Shade Dried and Hot Air–Oven Dried variants, used in ayurveda, cosmetics, herbal supplements, and food applications.",
+  "image": "https://www.indirootexims.com/Images/AmlaMain.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "IndiRoot Exims"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "IndiRoot Exims"
+  },
+  /* ADDED: Top-level price summary */
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "3.2",
+    "highPrice": "3.8",
+    "priceCurrency": "USD",
+    "offerCount": "2"
+  },
+  /* ADDED: Top-level rating summary */
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "47"
+  },
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "Shade Dried Amla Powder",
+      "description": "Shade dried Amla powder with maximum vitamin C retention, ideal for ayurvedic formulations, hair care, and nutraceutical applications.",
+      "image": "https://www.indirootexims.com/Images/SD-AMLA1.png",
+      "sku": "AML-SD-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.8",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/Amla.html"
       },
-      {
-        "@type": "Product",
-        "name": "Hot Air–Oven Dried Amla Powder",
-        "description": "Oven dried Amla powder with consistent colour, low moisture, and suitable for bulk food and pharmaceutical applications.",
-        "image": "https://www.indirootexims.com/Images/OD-AMLA1.png",
-        "sku": "AML-OD-002",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "3.2",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "19"
-        }
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "28"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Product",
+      "name": "Hot Air–Oven Dried Amla Powder",
+      "description": "Oven dried Amla powder with consistent colour, low moisture, and suitable for bulk food and pharmaceutical applications.",
+      "image": "https://www.indirootexims.com/Images/OD-AMLA1.png",
+      "sku": "AML-OD-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.2",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/Amla.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "19"
+      }
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {
