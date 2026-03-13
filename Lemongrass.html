@@ -41,64 +41,79 @@
   <link rel="stylesheet" href="/Css/ProductDetails.css" />
 
   <!-- JSON+LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProductGroup",
-    "name": "Lemongrass Powder",
-    "description": "Premium export-quality lemongrass powder available in Shade Dried and Hot Air–Oven Dried variants for tea, herbal blends, and food applications.",
-    "image": "https://www.indirootexims.com/Images/LG-Main.png",
-    "brand": {
-      "@type": "Brand",
-      "name": "IndiRoot Exims"
-    },
-    "manufacturer": {
-      "@type": "Organization",
-      "name": "IndiRoot Exims"
-    },
-    "hasVariant": [
-      {
-        "@type": "Product",
-        "name": "Shade Dried Lemon Grass Powder",
-        "description": "Naturally shade-dried lemongrass powder with strong aroma and preserved essential oil content. Ideal for herbal teas and natural seasoning.",
-        "image": "https://www.indirootexims.com/Images/LG-SD1.png",
-        "sku": "LGP-SD-001",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "4.5",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "16"
-        }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "name": "Lemongrass Powder",
+  "description": "Premium export-quality lemongrass powder available in Shade Dried and Hot Air–Oven Dried variants for tea, herbal blends, and food applications.",
+  "image": "https://www.indirootexims.com/Images/LG-Main.png",
+  "brand": {
+    "@type": "Brand",
+    "name": "IndiRoot Exims"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "IndiRoot Exims"
+  },
+  /* ADDED: Top-level summary offer to satisfy Google's requirements */
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "3.9",
+    "highPrice": "4.5",
+    "priceCurrency": "USD",
+    "offerCount": "2"
+  },
+  /* ADDED: Top-level summary rating */
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "27"
+  },
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "Shade Dried Lemon Grass Powder",
+      "description": "Naturally shade-dried lemongrass powder with strong aroma and preserved essential oil content. Ideal for herbal teas and natural seasoning.",
+      "image": "https://www.indirootexims.com/Images/LG-SD1.png",
+      "sku": "LGP-SD-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4.5",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/Lemongrass.html"
       },
-      {
-        "@type": "Product",
-        "name": "Hot Air–Oven Dried Lemon Grass Powder",
-        "description": "Hot air–oven dried lemongrass powder with uniform color and microbial safety, ideal for large-scale food processing and nutraceutical use.",
-        "image": "https://www.indirootexims.com/Images/LG-HD1.png",
-        "sku": "LGP-HD-002",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "3.9",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "11"
-        }
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "16"
       }
-    ]
-  }
-  </script>
-
+    },
+    {
+      "@type": "Product",
+      "name": "Hot Air–Oven Dried Lemon Grass Powder",
+      "description": "Hot air–oven dried lemongrass powder with uniform color and microbial safety, ideal for large-scale food processing and nutraceutical use.",
+      "image": "https://www.indirootexims.com/Images/LG-HD1.png",
+      "sku": "LGP-HD-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.9",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/Lemongrass.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "11"
+      }
+    }
+  ]
+}
+</script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
