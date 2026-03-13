@@ -41,72 +41,181 @@
   <link rel="stylesheet" href="/Css/ProductDetails.css" />
 
   <!-- Structured Data (Product Group + Organization + Website + Breadcrumb + FAQ) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProductGroup",
-    "name": "Banana Powder",
-    "description": "Export-quality banana powder variants including Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic types for food and health applications. Contact us for bulk orders or samples.",
-    "image": "https://www.indirootexims.com/Images/BananaMain.png",
-    "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-    "manufacturer": { "@type": "Organization", "name": "IndiRoot Exims" },
-    "mainEntityOfPage": "https://www.indirootexims.com/products/banana-powder.html",
-    "hasVariant": [
-      {"@type":"Product","name":"Raw Green Banana Powder","description":"Raw green banana powder made from unripe bananas, ideal for dietary and functional food uses. Contact us for bulk orders.","image":"https://www.indirootexims.com/Images/GR-BP1.png","sku":"BNP-RG-001","offers":{"@type":"Offer","priceCurrency":"USD","price":"3.5","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"18"}},
-      {"@type":"Product","name":"Spray Dried Banana Powder","description":"Fine spray-dried banana powder with longer shelf life, perfect for instant food and baby food products. Contact us for bulk orders.","image":"https://www.indirootexims.com/Images/SD-BP1.png","sku":"BNP-SD-002","offers":{"@type":"Offer","priceCurrency":"USD","price":"4.2","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"25"}},
-      {"@type":"Product","name":"Freeze Dried Banana Powder","description":"Freeze-dried banana powder with preserved nutrients and excellent aroma, suitable for health supplements. Contact us for sample packs.","image":"https://www.indirootexims.com/Images/FD-BP1.png","sku":"BNP-FD-003","offers":{"@type":"Offer","priceCurrency":"USD","price":"5.8","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"14"}},
-      {"@type":"Product","name":"Dehydrated Raw Banana Powder","description":"Made using traditional dehydration methods, rich in fiber and suitable for gluten-free diets. Contact us for bulk orders.","image":"https://www.indirootexims.com/Images/De-BP1.png","sku":"BNP-DR-004","offers":{"@type":"Offer","priceCurrency":"USD","price":"3.0","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.3","reviewCount":"9"}},
-      {"@type":"Product","name":"Organic Banana Powder","description":"Certified organic banana powder made without chemicals. Ideal for health-conscious buyers. Contact us for COA or certifications.","image":"https://www.indirootexims.com/Images/O-BP1.png","sku":"BNP-ORG-005","offers":{"@type":"Offer","priceCurrency":"USD","price":"4.8","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"22"}}
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "name": "Banana Powder",
+  "description": "Export-quality banana powder variants including Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic types for food and health applications.",
+  "image": "https://www.indirootexims.com/Images/BananaMain.png",
+  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
+  "manufacturer": { "@type": "Organization", "name": "IndiRoot Exims" },
+  "mainEntityOfPage": "https://www.indirootexims.com/products/banana-powder.html",
+  
+  /* FIXED: Top-level summary of all variants to resolve critical issues */
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "3.0",
+    "highPrice": "5.8",
+    "priceCurrency": "USD",
+    "offerCount": "5"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "88"
+  },
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"IndiRoot Exims",
-    "url":"https://www.indirootexims.com",
-    "logo":"https://www.indirootexims.com/Images/og-image.png",
-    "contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@indirootexims.com"}
-  }
-  </script>
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "Raw Green Banana Powder",
+      "description": "Raw green banana powder made from unripe bananas, ideal for dietary and functional food uses.",
+      "image": "https://www.indirootexims.com/Images/GR-BP1.png",
+      "sku": "BNP-RG-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.5",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/products/banana-powder.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "18"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Spray Dried Banana Powder",
+      "description": "Fine spray-dried banana powder with longer shelf life, perfect for instant food.",
+      "image": "https://www.indirootexims.com/Images/SD-BP1.png",
+      "sku": "BNP-SD-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4.2",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/products/banana-powder.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "25"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Freeze Dried Banana Powder",
+      "description": "Freeze-dried banana powder with preserved nutrients and excellent aroma.",
+      "image": "https://www.indirootexims.com/Images/FD-BP1.png",
+      "sku": "BNP-FD-003",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "5.8",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/products/banana-powder.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "14"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Dehydrated Raw Banana Powder",
+      "description": "Traditional dehydration methods, rich in fiber and gluten-free.",
+      "image": "https://www.indirootexims.com/Images/De-BP1.png",
+      "sku": "BNP-DR-004",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "3.0",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/products/banana-powder.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "reviewCount": "9"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Organic Banana Powder",
+      "description": "Certified organic banana powder made without chemicals.",
+      "image": "https://www.indirootexims.com/Images/O-BP1.png",
+      "sku": "BNP-ORG-005",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "4.8",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/products/banana-powder.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "22"
+      }
+    }
+  ]
+}
+</script>
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://www.indirootexims.com",
-    "name":"IndiRoot Exims",
-    "potentialAction":{"@type":"SearchAction","target":"https://www.indirootexims.com/search?q={search_term_string}","query-input":"required name=search_term_string"}
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"IndiRoot Exims",
+  "url":"https://www.indirootexims.com",
+  "logo":"https://www.indirootexims.com/Images/og-image.png",
+  "contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@indirootexims.com"}
+}
+</script>
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.indirootexims.com/"},
-      {"@type":"ListItem","position":2,"name":"Products","item":"https://www.indirootexims.com/products/"},
-      {"@type":"ListItem","position":3,"name":"Banana Powder","item":"https://www.indirootexims.com/products/banana-powder.html"}
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "url":"https://www.indirootexims.com",
+  "name":"IndiRoot Exims",
+  "potentialAction":{"@type":"SearchAction","target":"https://www.indirootexims.com/search?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
 
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"What variants of Banana Powder are available?","acceptedAnswer":{"@type":"Answer","text":"We offer Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic Banana Powder. Contact us for pricing and availability."}},
-      {"@type":"Question","name":"Are your banana powders certified organic or chemical-free?","acceptedAnswer":{"@type":"Answer","text":"Yes, our Organic Banana Powder is 100% certified organic and chemical-free. For COA or other certifications, please contact us."}},
-      {"@type":"Question","name":"What is the minimum order quantity for export?","acceptedAnswer":{"@type":"Answer","text":"MOQ varies per variant, ranging from 500 kg to 1000 kg. Contact us for detailed information."}},
-      {"@type":"Question","name":"How can I get a COA or other quality certificates?","acceptedAnswer":{"@type":"Answer","text":"Certificates such as COA, heavy metal tests, or pesticide reports are available on request. Please contact us to receive these documents."}}
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.indirootexims.com/"},
+    {"@type":"ListItem","position":2,"name":"Products","item":"https://www.indirootexims.com/products/"},
+    {"@type":"ListItem","position":3,"name":"Banana Powder","item":"https://www.indirootexims.com/products/banana-powder.html"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What variants of Banana Powder are available?","acceptedAnswer":{"@type":"Answer","text":"We offer Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic Banana Powder."}},
+    {"@type":"Question","name":"Are your banana powders certified organic or chemical-free?","acceptedAnswer":{"@type":"Answer","text":"Yes, our Organic Banana Powder is 100% certified organic and chemical-free."}},
+    {"@type":"Question","name":"What is the minimum order quantity for export?","acceptedAnswer":{"@type":"Answer","text":"MOQ varies per variant, ranging from 500 kg to 1000 kg."}},
+    {"@type":"Question","name":"How can I get a COA or other quality certificates?","acceptedAnswer":{"@type":"Answer","text":"Certificates such as COA, heavy metal tests, or pesticide reports are available on request."}}
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -329,6 +438,7 @@
 
 </body>
 </html>
+
 
 
 
