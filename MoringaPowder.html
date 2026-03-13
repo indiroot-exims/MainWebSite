@@ -33,28 +33,99 @@
 
   <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProductGroup",
-    "productGroupID": "moringa-variants",
-    "name": "Moringa Powder Variants",
-    "description": "Export-quality moringa powder variants including organic and air-dried forms, used in health, food, and personal care sectors.",
-    "brand": {"@type":"Organization","name":"IndiRoot Exims","url":"https://www.indirootexims.com"},
-    "url": "https://www.indirootexims.com/MoringaPowder.html",
-    "image": [
-      "https://www.indirootexims.com/Images/MoringaLeafPowder1.jpg",
-      "https://www.indirootexims.com/Images/MoringaLeafPowder2.jpg",
-      "https://www.indirootexims.com/Images/MoringaOrganic.png"
-    ],
-    "hasVariant": [
-      {"@type":"Product","name":"Organic Moringa Leaf Powder - Premium Export","image":"https://www.indirootexims.com/Images/MoringaLeafPowder1.jpg","description":"Gently dried to preserve nutrients and vibrant color. Perfect for premium superfood applications.","sku":"MOR-ORG-001","offers":{"@type":"Offer","priceCurrency":"INR","price":"450","availability":"https://schema.org/InStock","url":"https://www.indirootexims.com/MoringaPowder.html","priceValidUntil":"2026-01-01"}},
-      {"@type":"Product","name":"Natural Moringa Leaf Powder - Herbal Grade","image":"https://www.indirootexims.com/Images/MoringaLeafPowder2.jpg","description":"Retains natural taste and aroma with minimal processing — suitable for health mixes and herbal tea blends.","sku":"MOR-NAT-002","offers":{"@type":"Offer","priceCurrency":"INR","price":"380","availability":"https://schema.org/InStock","url":"https://www.indirootexims.com/MoringaPowder.html","priceValidUntil":"2026-01-01"}},
-      {"@type":"Product","name":"Organic Moringa Powder - Finely Milled","image":"https://www.indirootexims.com/Images/MoringaOrganic.png","description":"Certified organic and finely milled, ideal for nutraceuticals and cosmetics industry.","sku":"MOR-ORG-FINE-003","offers":{"@type":"Offer","priceCurrency":"INR","price":"520","availability":"https://schema.org/InStock","url":"https://www.indirootexims.com/MoringaPowder.html","priceValidUntil":"2026-01-01"}}
-    ],
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"112"},
-    "review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Verified Buyer"},"reviewBody":"Best quality Moringa powder we've ever imported. Fine texture and strong aroma."}
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "ProductGroup",
+  "productGroupID": "moringa-variants",
+  "name": "Moringa Powder Variants",
+  "description": "Export-quality moringa powder variants including organic and air-dried forms, used in health, food, and personal care sectors.",
+  "brand": {
+    "@type": "Brand",
+    "name": "IndiRoot Exims"
+  },
+  "url": "https://www.indirootexims.com/MoringaPowder.html",
+  "image": [
+    "https://www.indirootexims.com/Images/MoringaLeafPowder1.jpg",
+    "https://www.indirootexims.com/Images/MoringaLeafPowder2.jpg",
+    "https://www.indirootexims.com/Images/MoringaOrganic.png"
+  ],
+  
+  /* FIXED: Added Top-Level AggregateOffer to resolve Search Console error */
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "380",
+    "highPrice": "520",
+    "priceCurrency": "INR",
+    "offerCount": "3"
+  },
+  
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "112"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Verified Buyer"
+    },
+    "reviewBody": "Best quality Moringa powder we've ever imported. Fine texture and strong aroma."
+  },
+
+  "hasVariant": [
+    {
+      "@type": "Product",
+      "name": "Organic Moringa Leaf Powder - Premium Export",
+      "image": "https://www.indirootexims.com/Images/MoringaLeafPowder1.jpg",
+      "description": "Gently dried to preserve nutrients and vibrant color. Perfect for premium superfood applications.",
+      "sku": "MOR-ORG-001",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "450",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/MoringaPowder.html",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Natural Moringa Leaf Powder - Herbal Grade",
+      "image": "https://www.indirootexims.com/Images/MoringaLeafPowder2.jpg",
+      "description": "Retains natural taste and aroma with minimal processing — suitable for health mixes and herbal tea blends.",
+      "sku": "MOR-NAT-002",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "380",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/MoringaPowder.html",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Organic Moringa Powder - Finely Milled",
+      "image": "https://www.indirootexims.com/Images/MoringaOrganic.png",
+      "description": "Certified organic and finely milled, ideal for nutraceuticals and cosmetics industry.",
+      "sku": "MOR-ORG-FINE-003",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "520",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.indirootexims.com/MoringaPowder.html",
+        "priceValidUntil": "2026-12-31"
+      }
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {
@@ -224,4 +295,5 @@
 
 </body>
 </html>
+
 
