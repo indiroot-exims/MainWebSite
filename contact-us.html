@@ -52,120 +52,953 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="Css/bootstrap.min.css" />
   <link rel="stylesheet" href="Css/all.min.css" />
-  <link rel="stylesheet" href="Css/ContactUs.css" />
-  <link rel="stylesheet" href="Css/Style1.0.2.css">
+  <link rel="stylesheet" href="Css/Style1.0.2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Design Tokens ─── */
+    :root {
+      --ir-leaf:      #2d6a4f;
+      --ir-leaf-mid:  #40916c;
+      --ir-leaf-lite: #d8f3dc;
+      --ir-earth:     #7c4a1e;
+      --ir-earth-mid: #a0522d;
+      --ir-earth-lite:#f5ebe0;
+      --ir-cream:     #fdf6ee;
+      --ir-dark:      #1a1a18;
+      --ir-mid:       #4a4a45;
+      --ir-muted:     #8a8a80;
+      --ir-border:    rgba(45,106,79,0.18);
+      --ir-shadow:    0 8px 40px rgba(45,106,79,0.12);
+      --ir-radius:    16px;
+      --ir-radius-sm: 10px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--ir-cream);
+      color: var(--ir-dark);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Hero Banner ─── */
+    .ir-contact-hero {
+      position: relative;
+      background: linear-gradient(135deg, #1a3a2a 0%, #2d6a4f 50%, #40916c 100%);
+      padding: 80px 0 60px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .ir-contact-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 600px 400px at 80% 50%, rgba(64,145,108,0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 300px 300px at 10% 80%, rgba(124,74,30,0.15) 0%, transparent 60%);
+    }
+
+    .ir-contact-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 60px;
+      background: var(--ir-cream);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .ir-hero-eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(216,243,220,0.85);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .ir-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 7vw, 72px);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .ir-hero-title em {
+      font-style: italic;
+      color: #b7e4c7;
+    }
+
+    .ir-hero-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.72);
+      max-width: 460px;
+      margin: 0 auto;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* ─── Main Layout ─── */
+    .ir-contact-section {
+      padding: 60px 0 80px;
+    }
+
+    .ir-contact-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .ir-contact-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Info Panel ─── */
+    .ir-info-panel {
+      position: sticky;
+      top: 24px;
+    }
+
+    .ir-info-card {
+      background: linear-gradient(160deg, #1a3a2a 0%, #2a5a40 100%);
+      border-radius: var(--ir-radius);
+      padding: 40px 36px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ir-info-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(64,145,108,0.2);
+    }
+
+    .ir-info-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(124,74,30,0.15);
+    }
+
+    .ir-info-card-inner { position: relative; z-index: 1; }
+
+    .ir-brand-mark {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+      font-size: 24px;
+    }
+
+    .ir-info-card h3 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .ir-info-card .ir-tagline {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 36px;
+      letter-spacing: 0.03em;
+    }
+
+    .ir-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 28px 0;
+    }
+
+    .ir-contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    .ir-contact-item:last-child { margin-bottom: 0; }
+
+    .ir-ci-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+    }
+
+    .ir-ci-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 3px;
+    }
+
+    .ir-ci-value {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5;
+    }
+
+    .ir-ci-value a {
+      color: #b7e4c7;
+      text-decoration: none;
+    }
+
+    .ir-ci-value a:hover { text-decoration: underline; }
+
+    /* Badge row */
+    .ir-badge-row {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .ir-badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em;
+    }
+
+    /* Order Terms CTA inside panel */
+    .ir-order-btn {
+      display: block;
+      margin-top: 28px;
+      padding: 13px 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--ir-radius-sm);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    .ir-order-btn:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.35);
+      color: #fff;
+    }
+
+    .ir-order-btn .ir-btn-arrow {
+      margin-left: 6px;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .ir-order-btn:hover .ir-btn-arrow { transform: translateX(3px); }
+
+    /* ─── Form Panel ─── */
+    .ir-form-panel {
+      background: #fff;
+      border-radius: var(--ir-radius);
+      padding: 48px 44px;
+      box-shadow: var(--ir-shadow);
+      border: 1px solid var(--ir-border);
+    }
+
+    @media (max-width: 600px) {
+      .ir-form-panel { padding: 32px 24px; }
+    }
+
+    .ir-form-head {
+      margin-bottom: 36px;
+    }
+
+    .ir-form-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ir-leaf-mid);
+      margin-bottom: 10px;
+    }
+
+    .ir-form-eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px; height: 2px;
+      background: var(--ir-leaf-mid);
+      border-radius: 2px;
+    }
+
+    .ir-form-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      color: var(--ir-dark);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .ir-form-title em { font-style: italic; color: var(--ir-leaf); }
+
+    .ir-form-desc {
+      font-size: 14px;
+      color: var(--ir-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── Form Fields ─── */
+    .ir-field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 560px) {
+      .ir-field-row { grid-template-columns: 1fr; }
+    }
+
+    .ir-field {
+      margin-bottom: 20px;
+    }
+
+    .ir-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ir-mid);
+      margin-bottom: 7px;
+    }
+
+    .ir-label .req { color: var(--ir-earth-mid); }
+
+    .ir-input,
+    .ir-select,
+    .ir-textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid #e5e0d8;
+      border-radius: var(--ir-radius-sm);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ir-dark);
+      background: #fafaf8;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .ir-input::placeholder,
+    .ir-textarea::placeholder { color: var(--ir-muted); }
+
+    .ir-input:focus,
+    .ir-select:focus,
+    .ir-textarea:focus {
+      border-color: var(--ir-leaf-mid);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(45,106,79,0.08);
+    }
+
+    .ir-input:hover,
+    .ir-select:hover,
+    .ir-textarea:hover {
+      border-color: #c0b8a8;
+    }
+
+    /* Select arrow */
+    .ir-select-wrap {
+      position: relative;
+    }
+
+    .ir-select-wrap::after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px; height: 6px;
+      background: var(--ir-mid);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .ir-select { padding-right: 40px; cursor: pointer; }
+
+    .ir-select option[value=""] { color: var(--ir-muted); }
+
+    .ir-textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.55;
+    }
+
+    /* Product highlight */
+    .ir-product-hint {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--ir-leaf);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .ir-product-hint.visible { opacity: 1; }
+
+    .ir-product-hint::before {
+      content: '✓';
+      display: inline-flex;
+      width: 16px; height: 16px;
+      background: var(--ir-leaf-lite);
+      color: var(--ir-leaf);
+      border-radius: 50%;
+      font-size: 10px;
+      align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ─── Submit Button ─── */
+    .ir-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, var(--ir-leaf) 0%, var(--ir-leaf-mid) 100%);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: none;
+      border-radius: var(--ir-radius-sm);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ir-submit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0);
+      transition: background 0.2s;
+    }
+
+    .ir-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(45,106,79,0.35);
+    }
+
+    .ir-submit:hover::before { background: rgba(255,255,255,0.07); }
+
+    .ir-submit:active { transform: translateY(0); }
+
+    .ir-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .ir-submit-arrow {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .ir-submit:not(:disabled):hover .ir-submit-arrow { transform: translateX(4px); }
+
+    /* Spinner */
+    .ir-spinner {
+      width: 18px; height: 18px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Trust note */
+    .ir-trust-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--ir-muted);
+    }
+
+    .ir-trust-note svg { opacity: 0.5; }
+
+    /* ─── Success Modal ─── */
+    .ir-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 25, 15, 0.55);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ir-modal-overlay.open { display: flex; }
+
+    .ir-modal {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 420px;
+      width: calc(100% - 48px);
+      text-align: center;
+      animation: modalPop 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.85); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+
+    .ir-modal-icon {
+      width: 72px; height: 72px;
+      background: var(--ir-leaf-lite);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+    }
+
+    .ir-modal-title {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--ir-dark);
+      margin-bottom: 10px;
+    }
+
+    .ir-modal-body {
+      font-size: 14px;
+      color: var(--ir-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .ir-modal-close {
+      padding: 13px 36px;
+      background: linear-gradient(135deg, var(--ir-leaf) 0%, var(--ir-leaf-mid) 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--ir-radius-sm);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .ir-modal-close:hover { opacity: 0.85; }
+
+    /* ─── Responsive Tweaks ─── */
+    @media (max-width: 900px) {
+      .ir-info-panel { position: static; }
+      .ir-contact-hero { padding: 60px 0 50px; }
+    }
+  </style>
 </head>
 <body>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("-vWObobuhF0dLdBao"); // Replace with your actual Public Key
-    })();
-  </script>
+  <!-- EmailJS SDK v3 (pinned, stable CDN path) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    onload="emailjs.init('-vWObobuhF0dLdBao')"
+  ></script>
 
   <div id="header"></div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-fullscreen contact-us py-5">
-    <div class="container">
-      <div class="row g-4 align-items-stretch">
-        
-        <!-- Left Info Box -->
-        <div class="col-lg-5 col-md-6 col-12">
-          <div class="p-4 bg-dark text-white rounded shadow-sm h-100">
-            <h2 class="mb-4">Email Address</h2>
-            <p><i class="fa fa-envelope"></i> info@indirootexims.com</p>
+  <!-- ─── Hero ─── -->
+  <section class="ir-contact-hero">
+    <div class="ir-hero-eyebrow">Global Trade Enquiries</div>
+    <h1 class="ir-hero-title">Let's Start a <em>Conversation</em></h1>
+    <p class="ir-hero-sub">Premium natural products, sourced from India's heartland. Tell us what you need — we'll make it happen.</p>
+  </section>
 
-            <h2 class="mt-4 mb-2">Location</h2>
-            <p><strong>Registered Office:</strong><br>
-            TF-344 Aristo, Opp SHANGHANI SKYZ, Bhayli 391410, Vadodara, Gujarat, India.</p>
+  <!-- ─── Contact Section ─── -->
+  <section class="ir-contact-section">
+    <div class="ir-contact-wrap">
 
-            <p><strong>Corporate Office:</strong><br>
-            Phone: +91-8866402765</p>
+      <!-- Left Info Panel -->
+      <div class="ir-info-panel">
+        <div class="ir-info-card">
+          <div class="ir-info-card-inner">
+            <div class="ir-brand-mark">🌿</div>
+            <h3>IndiRoot Exims</h3>
+            <p class="ir-tagline">Trusted Exporter · Gujarat, India</p>
+
+            <div class="ir-contact-item">
+              <div class="ir-ci-icon">✉️</div>
+              <div>
+                <div class="ir-ci-label">Email</div>
+                <div class="ir-ci-value"><a href="mailto:info@indirootexims.com">info@indirootexims.com</a></div>
+              </div>
+            </div>
+
+            <div class="ir-contact-item">
+              <div class="ir-ci-icon">📞</div>
+              <div>
+                <div class="ir-ci-label">Phone</div>
+                <div class="ir-ci-value"><a href="tel:+918866402765">+91 88664 02765</a></div>
+              </div>
+            </div>
+
+            <div class="ir-divider"></div>
+
+            <div class="ir-contact-item">
+              <div class="ir-ci-icon">📍</div>
+              <div>
+                <div class="ir-ci-label">Registered Office</div>
+                <div class="ir-ci-value">TF-344 Aristo, Opp Shanghani Skyz,<br>Bhayli 391410, Vadodara, Gujarat, India.</div>
+              </div>
+            </div>
+
+            <div class="ir-badge-row">
+              <span class="ir-badge">🌍 Global Exporter</span>
+              <span class="ir-badge">✅ FSSAI Certified</span>
+              <span class="ir-badge">📦 Bulk Orders</span>
+            </div>
+
+            <a href="Orderterms.html" class="ir-order-btn">
+              View Order Terms &amp; Business Process <span class="ir-btn-arrow">→</span>
+            </a>
           </div>
         </div>
-
-        <!-- Right Contact Form -->
-        <div class="col-lg-7 col-md-6 col-12" style="position: relative; z-index: 2;">
-          <div class="p-4 bg-light rounded shadow-sm h-100 w-100">
-            <h2 class="text-center mb-4">Reach Us</h2>
-            <form id="contact-form">
-              <div class="mb-3">
-                <input type="text" class="form-control" name="user_name" placeholder="Your Name*" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" name="user_email" placeholder="Your Email" required>
-              </div>
-              <div class="mb-3">
-                <input type="tel" class="form-control" name="phone" placeholder="Your Phone Number" required>
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Enquiry" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary w-100" style="background-color: #313a63;">Submit</button>
-            </form>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Right Form Panel -->
+      <div class="ir-form-panel">
+        <div class="ir-form-head">
+          <div class="ir-form-eyebrow">Enquiry Form</div>
+          <h2 class="ir-form-title">Send Your <em>Enquiry</em></h2>
+          <p class="ir-form-desc">Fill in your details below and we'll get back to you within 24 hours with pricing, samples, and shipping details.</p>
+        </div>
+
+        <form id="contact-form" novalidate>
+
+          <!-- Name + Email -->
+          <div class="ir-field-row">
+            <div class="ir-field">
+              <label class="ir-label" for="user_name">Full Name <span class="req">*</span></label>
+              <input
+                id="user_name"
+                type="text"
+                name="user_name"
+                class="ir-input"
+                placeholder="e.g. Arjun Sharma"
+                required
+              />
+            </div>
+            <div class="ir-field">
+              <label class="ir-label" for="user_email">Email Address <span class="req">*</span></label>
+              <input
+                id="user_email"
+                type="email"
+                name="user_email"
+                class="ir-input"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Phone + Country -->
+          <div class="ir-field-row">
+            <div class="ir-field">
+              <label class="ir-label" for="phone">Phone Number <span class="req">*</span></label>
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                class="ir-input"
+                placeholder="+1 234 567 8900"
+                required
+              />
+            </div>
+            <div class="ir-field">
+              <label class="ir-label" for="country">Country</label>
+              <div class="ir-select-wrap">
+                <select id="country" name="country" class="ir-select">
+                  <option value="">Select Country</option>
+                  <option>United States</option>
+                  <option>United Kingdom</option>
+                  <option>Canada</option>
+                  <option>Australia</option>
+                  <option>Germany</option>
+                  <option>France</option>
+                  <option>Netherlands</option>
+                  <option>UAE</option>
+                  <option>Saudi Arabia</option>
+                  <option>Qatar</option>
+                  <option>Kuwait</option>
+                  <option>South Africa</option>
+                  <option>Kenya</option>
+                  <option>Nigeria</option>
+                  <option>Singapore</option>
+                  <option>Malaysia</option>
+                  <option>Japan</option>
+                  <option>South Korea</option>
+                  <option>New Zealand</option>
+                  <option>Brazil</option>
+                  <option>Mexico</option>
+                  <option>India</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product of Interest -->
+          <div class="ir-field">
+            <label class="ir-label" for="product">Product of Interest <span class="req">*</span></label>
+            <div class="ir-select-wrap">
+              <select id="product" name="product" class="ir-select" required>
+                <option value="">— Select a Product —</option>
+                <optgroup label="Fruit Powders">
+                  <option value="Banana Powder">Banana Powder</option>
+                  <option value="Mango Powder (Amchur)">Mango Powder (Amchur)</option>
+                  <option value="Amla Powder (Indian Gooseberry)">Amla Powder (Indian Gooseberry)</option>
+                  <option value="Papaya Powder">Papaya Powder</option>
+                  <option value="Pomegranate Powder">Pomegranate Powder</option>
+                  <option value="Jackfruit Powder">Jackfruit Powder</option>
+                </optgroup>
+                <optgroup label="Superfood &amp; Herbal Powders">
+                  <option value="Moringa Powder">Moringa Powder</option>
+                  <option value="Turmeric Powder (Haldi)">Turmeric Powder (Haldi)</option>
+                  <option value="Ashwagandha Powder">Ashwagandha Powder</option>
+                  <option value="Neem Powder">Neem Powder</option>
+                  <option value="Shatavari Powder">Shatavari Powder</option>
+                </optgroup>
+                <optgroup label="Vegetable Powders">
+                  <option value="Onion Powder">Onion Powder</option>
+                  <option value="Garlic Powder">Garlic Powder</option>
+                  <option value="Ginger Powder">Ginger Powder</option>
+                  <option value="Beetroot Powder">Beetroot Powder</option>
+                  <option value="Coriander Powder">Coriander Powder</option>
+                  <option value="Tomato Powder">Tomato Powder</option>
+                </optgroup>
+                <optgroup label="Spice Powders">
+                  <option value="Black Pepper Powder">Black Pepper Powder</option>
+                  <option value="Cardamom Powder">Cardamom Powder</option>
+                  <option value="Cinnamon Powder">Cinnamon Powder</option>
+                  <option value="Turmeric Powder (Methi)">Turmeric Powder (Haldi)</option>
+                   <option value="Chilly Powder (Methi)">Chilly Powder </option>
+                  <option value="Cumin Powder (Jeera)">Cumin Powder (Jeera)</option>
+                </optgroup>
+                <optgroup label="Seeds &amp; Others">
+                  <option value="Chia Seeds">Chia Seeds</option>
+                  <option value="Flaxseed Powder">Flaxseed Powder</option>
+                  <option value="Psyllium Husk (Isabgol)">Psyllium Husk (Isabgol)</option>
+                  <option value="Coconut Powder">Coconut Powder</option>
+                </optgroup>
+                <option value="Multiple Products / Custom Blend">Multiple Products / Custom Blend</option>
+                <option value="Other (specify in message)">Other (specify in message)</option>
+              </select>
+            </div>
+            <div class="ir-product-hint" id="product-hint" aria-live="polite"></div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="ir-field">
+            <label class="ir-label" for="quantity">Approximate Quantity</label>
+            <div class="ir-select-wrap">
+              <select id="quantity" name="quantity" class="ir-select">
+                <option value="">Select Quantity Range</option>
+                <option value="Sample Request (1–5 kg)">Sample Request (1–5 kg)</option>
+                <option value="Small Batch (5–50 kg)">Small Batch (5–50 kg)</option>
+                <option value="Medium Order (50–500 kg)">Medium Order (50–500 kg)</option>
+                <option value="Large Order (500 kg – 1 MT)">Large Order (500 kg – 1 MT)</option>
+                <option value="Bulk / Container Load (1 MT+)">Bulk / Container Load (1 MT+)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="ir-field">
+            <label class="ir-label" for="message">Your Message <span class="req">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              class="ir-textarea"
+              placeholder="Tell us about your requirements — packaging preferences, certifications needed, delivery timeline, etc."
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="ir-submit" id="submit-btn">
+            <span class="ir-spinner" id="btn-spinner"></span>
+            <span id="btn-label">Send Enquiry</span>
+            <span class="ir-submit-arrow" id="btn-arrow">→</span>
+          </button>
+
+          <div class="ir-trust-note">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Your information is secure and never shared with third parties.
+          </div>
+
+        </form>
+      </div>
+
     </div>
   </section>
 
-<section id="order-link" style="text-align:center; margin:2em 0;">
-  <a href="Orderterms.html" class="btn btn-primary" style="padding:0.75em 1.5em; font-size:1em; text-decoration:none; color:#fff; background-color:#28a745; border-radius:4px;">
-    View Order Terms & Business Process
-  </a>
-</section>
-
-
-  <!-- Footer Placeholder -->
-  <div id="footer"></div>
-
-  <!-- Success Modal -->
-  <div class="modal fade" id="enquirySuccessModal" tabindex="-1" aria-labelledby="enquirySuccessModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content shadow">
-        <div class="modal-header bg-success text-white">
-          <h5 class="modal-title" id="enquirySuccessModalLabel">Thank You!</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <p class="fs-5">🎉 Your enquiry has been submitted successfully!</p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-success" style="background-color: #313a63;" data-bs-dismiss="modal">Okay</button>
-        </div>
-      </div>
+  <!-- ─── Success Modal ─── -->
+  <div class="ir-modal-overlay" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="ir-modal">
+      <div class="ir-modal-icon">🌿</div>
+      <h3 class="ir-modal-title" id="modal-title">Enquiry Received!</h3>
+      <p class="ir-modal-body" id="modal-body">
+        Thank you for reaching out to <strong>IndiRoot Exims</strong>.<br>
+        Our team will get back to you within <strong>24 hours</strong> with pricing, availability, and next steps.
+      </p>
+      <button class="ir-modal-close" id="modal-close-btn">Got it, thanks!</button>
     </div>
   </div>
-  
+
+  <div id="footer"></div>
 
   <!-- Scripts -->
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      emailjs.sendForm('service_xixyk8l', 'template_39038qf', this)
-        .then(function(response) {
-          var enquirySuccessModal = new bootstrap.Modal(document.getElementById('enquirySuccessModal'));
-          enquirySuccessModal.show();
-          document.getElementById('contact-form').reset();
-        }, function(error) {
-          alert('FAILED... ' + JSON.stringify(error));
-        });
-    });
-  </script>
-
   <script src="Js/bootstrap.bundle.min.js"></script>
   <script src="Js/SearchBox.js"></script>
   <script src="Js/InjectLayout.js"></script>
+
+  <script>
+    // Product hint messages
+    const productHints = {
+      'Banana Powder':               'High-demand export product — great for food & beverage industry.',
+      'Moringa Powder':              'Our bestselling superfood powder — certified organic available.',
+      'Turmeric Powder (Haldi)':     'Premium curcumin-rich turmeric from Gujarat farms.',
+      'Amla Powder (Indian Gooseberry)': 'Rich in Vitamin C — popular in nutraceutical markets.',
+      'Ashwagandha Powder':          'High-demand in wellness & supplement industries worldwide.',
+      'Mango Powder (Amchur)':       'Tangy natural flavouring — great for culinary exports.',
+    };
+
+    const productSelect = document.getElementById('product');
+    const productHint   = document.getElementById('product-hint');
+
+    productSelect.addEventListener('change', function() {
+      const val = this.value;
+      if (val) {
+        const hint = productHints[val] || 'Product enquiry noted — our team will provide full details.';
+        productHint.textContent = hint;
+        productHint.classList.add('visible');
+      } else {
+        productHint.classList.remove('visible');
+      }
+    });
+
+    // Modal helpers
+    const modal        = document.getElementById('success-modal');
+    const modalBody    = document.getElementById('modal-body');
+    const modalCloseBtn= document.getElementById('modal-close-btn');
+
+    function openModal(productName) {
+      const productLine = productName
+        ? `<br>We'll prepare details specifically for <strong>${productName}</strong>.`
+        : '';
+      modalBody.innerHTML =
+        `Thank you for reaching out to <strong>IndiRoot Exims</strong>.${productLine}<br>
+         Our team will get back to you within <strong>24 hours</strong> with pricing, availability, and next steps.`;
+      modal.classList.add('open');
+    }
+
+    function closeModal() { modal.classList.remove('open'); }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+    // Form submit
+    const form      = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const spinner   = document.getElementById('btn-spinner');
+    const btnLabel  = document.getElementById('btn-label');
+    const btnArrow  = document.getElementById('btn-arrow');
+
+    function setLoading(on) {
+      submitBtn.disabled = on;
+      spinner.style.display = on ? 'block' : 'none';
+      btnLabel.textContent  = on ? 'Sending…' : 'Send Enquiry';
+      btnArrow.style.display= on ? 'none' : 'inline-block';
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Basic client-side validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const selectedProduct = productSelect.value;
+
+      setLoading(true);
+
+      emailjs.sendForm('service_xixyk8l', 'template_39038qf', form)
+        .then(function() {
+          setLoading(false);
+          openModal(selectedProduct);
+          form.reset();
+          productHint.classList.remove('visible');
+        })
+        .catch(function(error) {
+          setLoading(false);
+          alert('Something went wrong. Please try again or email us directly at info@indirootexims.com\n\nError: ' + JSON.stringify(error));
+        });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
