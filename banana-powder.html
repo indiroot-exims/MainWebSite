@@ -4,22 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Banana Powder Exporter from India – Freeze Dried, Spray Dried & Raw Green | IndiRoot Exims</title>
+  <!-- ✅ IMPROVED TITLE — core head keyword first, variants named -->
+  <title>Banana Powder Exporter from India | Raw Green, Dehydrated, Spray Dried & Freeze Dried | IndiRoot Exims</title>
 
-  <meta name="description" content="Premium banana powder from India: freeze dried, spray dried, raw green, dehydrated & organic. Trusted supply-chain partners for food, pharma & nutrition industries." />
-  <meta name="keywords" content="banana powder exporter India, freeze dried banana powder, spray dried banana powder, raw green banana powder, dehydrated banana powder, organic banana powder, food powders India" />
+  <!-- ✅ IMPROVED META DESCRIPTION — buyer-focused, MOQ included -->
+  <meta name="description" content="Bulk Banana Powder exported from India in 4 variants: Raw Green, Dehydrated, Spray Dried & Freeze Dried. COA, heavy metal & pesticide reports on request. Global export. MOQ 500 kg." />
+
+  <meta name="keywords" content="banana powder exporter India, freeze dried banana powder, spray dried banana powder, raw green banana powder, dehydrated banana powder, bulk banana powder India, banana powder supplier India, banana powder export" />
+
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <link rel="canonical" href="https://www.indirootexims.com/products/banana-powder.html" />
-  <link rel="alternate" href="https://www.indirootexims.com/products/banana-powder.html" hreflang="en-in" />
-  <link rel="alternate" href="https://www.indirootexims.com/products/banana-powder.html" hreflang="x-default" />
+
+  <!-- ✅ FIX 1: CRITICAL — canonical was pointing to wrong /products/ subdirectory -->
+  <link rel="canonical" href="https://www.indirootexims.com/banana-powder.html" />
+
+  <!-- ✅ FIX 2: hreflang — both were pointing to wrong /products/ path -->
+  <link rel="alternate" href="https://www.indirootexims.com/banana-powder.html" hreflang="en" />
+  <link rel="alternate" href="https://www.indirootexims.com/banana-powder.html" hreflang="x-default" />
 
   <link rel="icon" href="/Images/favicon.ico" type="image/x-icon" />
 
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="Banana Powder Exporter from India | IndiRoot Exims" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Banana Powder Exporter from India | Raw Green, Dehydrated, Spray Dried & Freeze Dried | IndiRoot Exims" />
   <meta property="og:site_name" content="IndiRoot Exims" />
-  <meta property="og:url" content="https://www.indirootexims.com/products/banana-powder.html" />
-  <meta property="og:description" content="Export-quality banana powder from India in freeze dried, spray dried & raw green variants. Reliable quality via trusted supply-chain partners." />
+  <!-- ✅ FIX 3: OG URL was pointing to wrong /products/ path -->
+  <meta property="og:url" content="https://www.indirootexims.com/banana-powder.html" />
+  <meta property="og:description" content="Bulk Banana Powder from India in 4 variants: Raw Green, Dehydrated, Spray Dried & Freeze Dried. COA, heavy metal & pesticide reports on request. Global export. MOQ 500 kg." />
   <meta property="og:type" content="product" />
   <meta property="og:image" content="https://www.indirootexims.com/Images/og-image.png" />
   <meta property="og:image:alt" content="IndiRoot Exims Banana Powder variants for export" />
@@ -31,7 +40,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Banana Powder Exporter from India | IndiRoot Exims" />
-  <meta name="twitter:description" content="Freeze dried, spray dried & raw green banana powder. Export-ready quality from India." />
+  <meta name="twitter:description" content="Raw Green, Dehydrated, Spray Dried & Freeze Dried banana powder. Bulk export from India. MOQ 500 kg." />
   <meta name="twitter:image" content="https://www.indirootexims.com/Images/og-image.png" />
 
   <!-- CSS -->
@@ -40,190 +49,148 @@
   <link rel="stylesheet" href="/Css/Style1.0.2.css" />
   <link rel="stylesheet" href="/Css/ProductDetails.css" />
 
-  <!-- Structured Data (Product Group + Organization + Website + Breadcrumb + FAQ) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProductGroup",
-  "name": "Banana Powder",
-  "description": "Export-quality banana powder variants including Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic types for food and health applications.",
-  "image": "https://www.indirootexims.com/Images/BananaMain.png",
-  "brand": { "@type": "Brand", "name": "IndiRoot Exims" },
-  "manufacturer": { "@type": "Organization", "name": "IndiRoot Exims" },
-  "mainEntityOfPage": "https://www.indirootexims.com/products/banana-powder.html",
-  
-  /* FIXED: Top-level summary of all variants to resolve critical issues */
-  "offers": {
-    "@type": "AggregateOffer",
-    "lowPrice": "3.0",
-    "highPrice": "5.8",
-    "priceCurrency": "USD",
-    "offerCount": "5"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "reviewCount": "88"
-  },
+  <!-- ✅ FIX 4: ProductGroup schema — completely removed.
+       Fabricated aggregateRating (88 reviews, individual variant ratings) is a misleading
+       data risk and the hasVariant+offers pattern causes price-mismatch errors on this page
+       the same way it did on all country pages. FAQPage and BreadcrumbList below are
+       the correct schema types for this page. -->
 
-  "hasVariant": [
-    {
-      "@type": "Product",
-      "name": "Raw Green Banana Powder",
-      "description": "Raw green banana powder made from unripe bananas, ideal for dietary and functional food uses.",
-      "image": "https://www.indirootexims.com/Images/GR-BP1.png",
-      "sku": "BNP-RG-001",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "3.5",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.indirootexims.com/products/banana-powder.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "18"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Spray Dried Banana Powder",
-      "description": "Fine spray-dried banana powder with longer shelf life, perfect for instant food.",
-      "image": "https://www.indirootexims.com/Images/SD-BP1.png",
-      "sku": "BNP-SD-002",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "4.2",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.indirootexims.com/products/banana-powder.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "25"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Freeze Dried Banana Powder",
-      "description": "Freeze-dried banana powder with preserved nutrients and excellent aroma.",
-      "image": "https://www.indirootexims.com/Images/FD-BP1.png",
-      "sku": "BNP-FD-003",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "5.8",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.indirootexims.com/products/banana-powder.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "14"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Dehydrated Raw Banana Powder",
-      "description": "Traditional dehydration methods, rich in fiber and gluten-free.",
-      "image": "https://www.indirootexims.com/Images/De-BP1.png",
-      "sku": "BNP-DR-004",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "3.0",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.indirootexims.com/products/banana-powder.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.3",
-        "reviewCount": "9"
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Organic Banana Powder",
-      "description": "Certified organic banana powder made without chemicals.",
-      "image": "https://www.indirootexims.com/Images/O-BP1.png",
-      "sku": "BNP-ORG-005",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "4.8",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://www.indirootexims.com/products/banana-powder.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "22"
-      }
+  <!-- ✅ Organization schema — kept, corrected URL -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IndiRoot Exims",
+    "url": "https://www.indirootexims.com",
+    "logo": "https://www.indirootexims.com/Images/og-image.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "info@indirootexims.com",
+      "telephone": "+91-88664-02765"
     }
-  ]
-}
-</script>
+  }
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"IndiRoot Exims",
-  "url":"https://www.indirootexims.com",
-  "logo":"https://www.indirootexims.com/Images/og-image.png",
-  "contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@indirootexims.com"}
-}
-</script>
+  <!-- ✅ WebSite schema — kept as-is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.indirootexims.com",
+    "name": "IndiRoot Exims",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.indirootexims.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "url":"https://www.indirootexims.com",
-  "name":"IndiRoot Exims",
-  "potentialAction":{"@type":"SearchAction","target":"https://www.indirootexims.com/search?q={search_term_string}","query-input":"required name=search_term_string"}
-}
-</script>
+  <!-- ✅ FIX 5: BreadcrumbList — was pointing to wrong /products/ path. Corrected. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.indirootexims.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Our Products", "item": "https://www.indirootexims.com/our-product.html" },
+      { "@type": "ListItem", "position": 3, "name": "Banana Powder", "item": "https://www.indirootexims.com/banana-powder.html" }
+    ]
+  }
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.indirootexims.com/"},
-    {"@type":"ListItem","position":2,"name":"Products","item":"https://www.indirootexims.com/products/"},
-    {"@type":"ListItem","position":3,"name":"Banana Powder","item":"https://www.indirootexims.com/products/banana-powder.html"}
-  ]
-}
-</script>
+  <!-- ✅ FIX 6: FAQPage schema — organic references removed, 2 new FAQs added -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What variants of Banana Powder are available for export?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer Raw Green Banana Powder, Dehydrated Banana Powder, Spray Dried Banana Powder, and Freeze Dried Banana Powder for bulk export from India. Contact us for pricing and availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum order quantity for banana powder export?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MOQ is 500 kg for most variants. Raw Green Banana Powder has a standard MOQ of 1000 kg. Contact us to discuss your specific requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I get a COA or other quality certificates?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certificates including COA, heavy metal analysis, pesticide residue reports, microbiology reports, allergen statements, and GMO declarations are available on request for every shipment lot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which countries do you export banana powder to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We export banana powder from India to the USA, UAE, UK, Germany, France, Netherlands, Italy, Spain, Poland, Belgium, Sweden, Denmark, Austria, Kenya, and other countries worldwide. Country-specific documentation is available on request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documentation do you provide for banana powder export?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide COA, MSDS, heavy metal analysis, pesticide residue reports, aflatoxin testing, microbiology reports, allergen statements, GMO declarations, non-irradiation certificates, and other export documentation on request, aligned with the import requirements of the destination country."
+        }
+      }
+    ]
+  }
+  </script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"What variants of Banana Powder are available?","acceptedAnswer":{"@type":"Answer","text":"We offer Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic Banana Powder."}},
-    {"@type":"Question","name":"Are your banana powders certified organic or chemical-free?","acceptedAnswer":{"@type":"Answer","text":"Yes, our Organic Banana Powder is 100% certified organic and chemical-free."}},
-    {"@type":"Question","name":"What is the minimum order quantity for export?","acceptedAnswer":{"@type":"Answer","text":"MOQ varies per variant, ranging from 500 kg to 1000 kg."}},
-    {"@type":"Question","name":"How can I get a COA or other quality certificates?","acceptedAnswer":{"@type":"Answer","text":"Certificates such as COA, heavy metal tests, or pesticide reports are available on request."}}
-  ]
-}
-</script>
 </head>
-
 <body>
 <div id="header"></div>
 
-<!-- Recipes Section -->
+<!-- ✅ FIX 7: H1 was visually hidden — now visible as main page heading -->
+<section class="py-4 bg-light text-center">
+  <div class="container">
+    <h1 class="mb-2">Banana Powder Exporter from India</h1>
+    <p class="lead mb-3">Raw Green, Dehydrated, Spray Dried &amp; Freeze Dried — Bulk Export Ready. MOQ 500 kg. COA &amp; full documentation on request.</p>
+    <a href="/contact-us.html" class="btn btn-primary px-4 py-2 me-2">Request a Quote</a>
+    <a href="https://wa.me/918866402765" class="btn btn-success px-4 py-2">WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- Trust bar -->
+<section class="py-3 border-bottom">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-6 col-md-3 mb-2">
+        <strong>4 Variants</strong>
+        <p class="small mb-0">Raw, Dehydrated, Spray, Freeze</p>
+      </div>
+      <div class="col-6 col-md-3 mb-2">
+        <strong>MOQ 500 kg</strong>
+        <p class="small mb-0">Most variants</p>
+      </div>
+      <div class="col-6 col-md-3 mb-2">
+        <strong>Global Export</strong>
+        <p class="small mb-0">USA, UAE, Europe, Africa &amp; more</p>
+      </div>
+      <div class="col-6 col-md-3 mb-2">
+        <strong>Full Documentation</strong>
+        <p class="small mb-0">COA, MSDS, heavy metal &amp; more</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recipes link -->
 <section class="text-center my-4" aria-label="Banana powder recipes">
-  <a href="banana-recipes.html" class="custom-btn" 
+  <a href="banana-recipes.html" class="custom-btn"
      style="background:#28a745; color:#fff; padding:10px 20px; border-radius:6px; font-weight:500;" aria-label="Explore Banana Recipes">
     🍲 Explore Banana Recipes
   </a>
@@ -231,32 +198,58 @@
 
 <main class="container py-5" role="main" aria-label="Banana powder product details">
 
-  <h1 class="visually-hidden">Banana Powder – Freeze Dried, Spray Dried & Raw Green | IndiRoot Exims</h1>
-
   <h2 class="text-center mb-4">Our Banana Powder Variants</h2>
   <div class="row gy-5" style="margin-top: 20px;">
 
-    <!-- Product Cards -->
+    <!-- Raw Green -->
     <article id="raw-green" class="card shadow-sm mb-4 border-0" style="max-width:900px;margin:auto;" aria-label="Raw Green Banana Powder">
       <div class="row g-0 align-items-center">
-        <div class="col-md-4 text-center" >
+        <div class="col-md-4 text-center">
           <img src="Images/GR-BP1.png" alt="IndiRoot Exims Raw Green Banana Powder from India" class="product-image" loading="lazy" />
         </div>
         <div class="col-md-8 product-details">
           <div class="card-body py-3">
             <h3 class="card-title mb-2 h5">Raw Green Banana Powder</h3>
-            <p class="card-text mb-2">Naturally sun-dried, budget-friendly banana powder with gut health benefits.</p>
+            <p class="card-text mb-2">Naturally sun-dried, budget-friendly banana powder high in resistant starch (RS2) — ideal for gut health supplements, sports nutrition, and functional food applications.</p>
             <div class="specs">
-              <p><strong>Drying Method:</strong> Sun/Air Drying</p>
-              <p><strong>Color:</strong> White/Cream</p>
-              <p><strong>Shelf Life:</strong> 12 - 15 Months</p>
+              <p><strong>Drying Method:</strong> Sun / Air Drying</p>
+              <p><strong>Colour:</strong> White / Cream</p>
+              <p><strong>Shelf Life:</strong> 12–15 Months</p>
               <p><strong>MOQ:</strong> 1000 kg</p>
             </div>
             <ul>
-              <li>Economical production method</li>
-              <li>Ideal for Indian and African markets</li>
+              <li>Naturally high in prebiotic resistant starch (RS2)</li>
+              <li>Suitable for gut health, diabetic-friendly, and sports nutrition formulations</li>
+              <li>COA, heavy metal &amp; pesticide reports available on request</li>
             </ul>
-            <a href="contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Raw Green Banana Powder quote">📩 Contact Us</a>
+            <a href="/contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Raw Green Banana Powder quote">📩 Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Dehydrated -->
+    <article id="dehydrated" class="card shadow-sm mb-4 border-0" style="max-width:900px;margin:auto;" aria-label="Dehydrated Banana Powder">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="Images/De-BP1.png" alt="IndiRoot Exims Dehydrated Banana Powder from India" class="product-image" loading="lazy" />
+        </div>
+        <div class="col-md-8 product-details">
+          <div class="card-body py-3">
+            <h3 class="card-title mb-2 h5">Dehydrated Banana Powder</h3>
+            <p class="card-text mb-2">Produced from ripe bananas using hot air dehydration. Retains natural banana flavour — ideal for baby food, bakery premixes, smoothies, and instant food formulations.</p>
+            <div class="specs">
+              <p><strong>Drying Method:</strong> Hot Air Dehydration</p>
+              <p><strong>Colour:</strong> Light Cream to Yellow</p>
+              <p><strong>Shelf Life:</strong> 12 Months</p>
+              <p><strong>MOQ:</strong> 500 kg</p>
+            </div>
+            <ul>
+              <li>E. coli Absent, Salmonella Absent — suitable for baby food applications</li>
+              <li>Gluten-free and rich in natural fibre</li>
+              <li>COA, heavy metal &amp; pesticide reports available on request</li>
+            </ul>
+            <a href="/contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Dehydrated Banana Powder quote">📩 Request a Quote</a>
           </div>
         </div>
       </div>
@@ -271,19 +264,19 @@
         <div class="col-md-8 product-details">
           <div class="card-body py-3">
             <h3 class="card-title mb-2 h5">Spray Dried Banana Powder</h3>
-            <p class="card-text mb-2">Made using advanced spray drying technology. Ideal for health supplements, bakery applications, and baby foods.</p>
+            <p class="card-text mb-2">Fine, free-flowing powder produced using advanced spray drying technology. Ideal for beverage manufacturing, instant drink mixes, flavoured dairy, and protein supplement blends.</p>
             <div class="specs">
               <p><strong>Drying Method:</strong> Spray Drying</p>
-              <p><strong>Color:</strong> Light Yellow</p>
+              <p><strong>Colour:</strong> Light Yellow</p>
               <p><strong>Shelf Life:</strong> 12 Months</p>
               <p><strong>MOQ:</strong> 1000 kg</p>
             </div>
             <ul>
-              <li>Rich in potassium and dietary fiber</li>
-              <li>Convenient for bulk formulation</li>
-              <li>No special storage required and has a longer shelf life</li>
+              <li>Excellent solubility and dispersibility for beverage applications</li>
+              <li>Rich in potassium and dietary fibre</li>
+              <li>COA, heavy metal &amp; pesticide reports available on request</li>
             </ul>
-            <a href="contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Spray Dried Banana Powder quote">📩 Contact Us</a>
+            <a href="/contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Spray Dried Banana Powder quote">📩 Request a Quote</a>
           </div>
         </div>
       </div>
@@ -298,69 +291,19 @@
         <div class="col-md-8 product-details">
           <div class="card-body py-3">
             <h3 class="card-title mb-2 h5">Freeze Dried Banana Powder</h3>
-            <p class="card-text mb-2">Maximum nutrient retention. Perfect for high-nutrition applications.</p>
+            <p class="card-text mb-2">Premium freeze dried banana powder with maximum nutrient and aroma retention. Preferred by premium health food brands, cereal manufacturers, and high-end supplement formulators globally.</p>
             <div class="specs">
               <p><strong>Drying Method:</strong> Freeze Drying</p>
-              <p><strong>Color:</strong> Cream</p>
-              <p><strong>Shelf Life:</strong> 12-18 Months</p>
+              <p><strong>Colour:</strong> Cream</p>
+              <p><strong>Shelf Life:</strong> 12–18 Months</p>
               <p><strong>MOQ:</strong> 500 kg</p>
             </div>
             <ul>
-              <li>No additives or preservatives</li>
-              <li>Superior quality for health industries</li>
+              <li>Maximum nutrient and aroma retention — no additives or preservatives</li>
+              <li>Preferred for premium health food, cereal, granola, and snack applications</li>
+              <li>COA, heavy metal &amp; pesticide reports available on request</li>
             </ul>
-            <a href="contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Freeze Dried Banana Powder quote">📩 Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Dehydrated Raw -->
-    <article id="dehydrated" class="card shadow-sm mb-4 border-0" style="max-width:900px;margin:auto;" aria-label="Dehydrated Raw Banana Powder">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-4 text-center">
-          <img src="Images/De-BP1.png" alt="IndiRoot Exims Dehydrated Raw Banana Powder from India" class="product-image" loading="lazy" />
-        </div>
-        <div class="col-md-8 product-details">
-          <div class="card-body py-3">
-            <h3 class="card-title mb-2 h5">Dehydrated Raw Banana Powder</h3>
-            <p class="card-text mb-2">Gluten-free and ideal for baby foods and medical nutrition.</p>
-            <div class="specs">
-              <p><strong>Drying Method:</strong> Hot Air Dehydration</p>
-              <p><strong>Color:</strong> Light Cream</p>
-              <p><strong>Shelf Life:</strong> 12 Months</p>
-              <p><strong>MOQ:</strong> 500 kg</p>
-            </div>
-            <ul>
-              <li>Rich in fiber and essential nutrients</li>
-            </ul>
-            <a href="contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Dehydrated Raw Banana Powder quote">📩 Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Organic -->
-    <article id="organic" class="card shadow-sm mb-4 border-0" style="max-width:900px;margin:auto;" aria-label="Organic Banana Powder">
-      <div class="row g-0 align-items-center">
-        <div class="col-md-4 text-center">
-          <img src="Images/O-BP1.png" alt="IndiRoot Exims Organic Banana Powder from India" class="product-image" loading="lazy" />
-        </div>
-        <div class="col-md-8 product-details">
-          <div class="card-body py-3">
-            <h3 class="card-title mb-2 h5">Organic Banana Powder</h3>
-            <p class="card-text mb-2">100% certified organic and chemical-free powder.</p>
-            <div class="specs">
-              <p><strong>Certification:</strong> Organic Certified</p>
-              <p><strong>Color:</strong> Creamy Yellow</p>
-              <p><strong>Shelf Life:</strong> 12-18 Months</p>
-              <p><strong>MOQ:</strong> 500 kg</p>
-            </div>
-            <ul>
-              <li>Organic & chemical-free</li>
-              <li>COA available on request</li>
-            </ul>
-            <a href="contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Organic Banana Powder quote">📩 Contact Us</a>
+            <a href="/contact-us.html" class="custom-btn" aria-label="Contact IndiRoot Exims for Freeze Dried Banana Powder quote">📩 Request a Quote</a>
           </div>
         </div>
       </div>
@@ -370,19 +313,75 @@
 
 </main>
 
+<!-- ✅ NEWLY ADDED: Country export cluster links — critical for internal link authority -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-3 text-center">Banana Powder Export by Country</h2>
+    <p class="text-center mb-4">We export bulk banana powder from India to buyers across the world. Click your country for documentation specifics, port details, and local compliance information.</p>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-usa.html" class="btn btn-outline-primary w-100">🇺🇸 USA</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-uae.html" class="btn btn-outline-primary w-100">🇦🇪 UAE / GCC</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-kenya.html" class="btn btn-outline-primary w-100">🇰🇪 Kenya</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-europe.html" class="btn btn-outline-primary w-100">🇪🇺 Europe</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-uk.html" class="btn btn-outline-primary w-100">🇬🇧 United Kingdom</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-germany.html" class="btn btn-outline-primary w-100">🇩🇪 Germany</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-france.html" class="btn btn-outline-primary w-100">🇫🇷 France</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-netherlands.html" class="btn btn-outline-primary w-100">🇳🇱 Netherlands</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-italy.html" class="btn btn-outline-primary w-100">🇮🇹 Italy</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-spain.html" class="btn btn-outline-primary w-100">🇪🇸 Spain</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-poland.html" class="btn btn-outline-primary w-100">🇵🇱 Poland</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-belgium.html" class="btn btn-outline-primary w-100">🇧🇪 Belgium</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-sweden.html" class="btn btn-outline-primary w-100">🇸🇪 Sweden</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-denmark.html" class="btn btn-outline-primary w-100">🇩🇰 Denmark</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="/banana-powder-austria.html" class="btn btn-outline-primary w-100">🇦🇹 Austria</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ Section -->
 <section class="faq-section container py-5" aria-label="Frequently Asked Questions">
-  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+  <h2 class="text-center mb-4">Frequently Asked Questions — Banana Powder Export</h2>
   <div class="accordion" id="faqAccordion">
+
     <div class="accordion-item">
       <h3 class="accordion-header" id="faq1">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-          What variants of Banana Powder are available?
+          What variants of Banana Powder are available for export?
         </button>
       </h3>
       <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          We offer Raw Green, Spray Dried, Freeze Dried, Dehydrated Raw, and Organic Banana Powder. Contact us for pricing and availability.
+          We offer Raw Green Banana Powder, Dehydrated Banana Powder, Spray Dried Banana Powder, and Freeze Dried Banana Powder for bulk export from India. Contact us for pricing and current availability.
         </div>
       </div>
     </div>
@@ -390,12 +389,12 @@
     <div class="accordion-item">
       <h3 class="accordion-header" id="faq2">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-          Are your banana powders certified organic or chemical-free?
+          What is the minimum order quantity for banana powder export?
         </button>
       </h3>
       <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Yes, our Organic Banana Powder is 100% certified organic and chemical-free. For COA or other certifications, please contact us.
+          MOQ is 500 kg for most variants. Raw Green Banana Powder has a standard MOQ of 1000 kg. Contact us to discuss your specific requirements and shipment volume.
         </div>
       </div>
     </div>
@@ -403,12 +402,12 @@
     <div class="accordion-item">
       <h3 class="accordion-header" id="faq3">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-          What is the minimum order quantity for export?
+          How can I get a COA or other quality certificates?
         </button>
       </h3>
       <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          MOQ varies per variant, ranging from 500 kg to 1000 kg. Contact us for detailed information.
+          COA, heavy metal analysis, pesticide residue reports, microbiology reports, allergen statements, GMO declarations, and non-irradiation certificates are all available on request for each shipment lot. Contact us with your specific documentation requirements.
         </div>
       </div>
     </div>
@@ -416,29 +415,48 @@
     <div class="accordion-item">
       <h3 class="accordion-header" id="faq4">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-          How can I get a COA or other quality certificates?
+          Which countries do you export banana powder to?
         </button>
       </h3>
       <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          Certificates such as COA, heavy metal tests, or pesticide reports are available on request. Please contact us to receive these documents.
+          We export banana powder from India to buyers across the USA, UAE, UK, Germany, France, Netherlands, Italy, Spain, Poland, Belgium, Sweden, Denmark, Austria, Kenya, and other countries globally. Visit the country-specific pages linked above for destination-specific compliance and documentation details.
         </div>
       </div>
     </div>
+
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+          What documentation do you provide for banana powder export?
+        </button>
+      </h3>
+      <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We provide COA, MSDS, heavy metal analysis, pesticide residue reports, aflatoxin testing, microbiology reports, allergen statements, GMO declarations, non-irradiation certificates, and other export documentation on request — aligned with the import requirements of your destination country.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 class="mb-3 text-white">Ready to Source Banana Powder from India?</h2>
+    <p class="mb-4 text-white">Tell us your variant, quantity, and destination country — we respond within 24 hours with pricing and documentation details.</p>
+    <a href="/contact-us.html" class="btn btn-light btn-lg px-5 me-2">Request a Quote</a>
+    <a href="https://wa.me/918866402765" class="btn btn-outline-light btn-lg px-5">WhatsApp Us</a>
   </div>
 </section>
 
 <div id="footer"></div>
 
-<!-- JS -->
-  <script src="Js/bootstrap.bundle.min.js" defer></script>
-  <script src="Js/SearchBox.js" defer></script>
-  <script src="Js/InjectLayout.js" defer></script>
-  <script src="Js/lazysizes.min.js" async></script>
+<script src="Js/bootstrap.bundle.min.js" defer></script>
+<script src="Js/SearchBox.js" defer></script>
+<script src="Js/InjectLayout.js" defer></script>
+<script src="Js/lazysizes.min.js" async></script>
 
 </body>
 </html>
-
-
-
-
