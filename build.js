@@ -86,13 +86,15 @@ function build() {
     count++;
   }
 
-  // Copy static asset folders as-is (Images, Css, Js) so /docs is a
-  // complete, deployable site.
-  for (const assetDir of ["Images", "Css", "Js", "favicon.ico"]) {
-    const src = path.join(ROOT, assetDir);
-    if (fs.existsSync(src)) {
-      copyRecursive(src, path.join(OUT_DIR, assetDir));
-    }
+  // Copy every other file/folder in the repo as-is (Images, Css, Js,
+  // webfonts, favicon.ico, CNAME, robots.txt, sitemap.xml, etc.) so /docs
+  // is a complete, deployable mirror of the site. We only special-case
+  // .html files (already built above) and the SKIP list.
+  for (const entry of fs.readdirSync(ROOT)) {
+    if (SKIP.has(entry)) continue;
+    if (entry.toLowerCase().endsWith(".html")) continue; // handled above
+    const src = path.join(ROOT, entry);
+    copyRecursive(src, path.join(OUT_DIR, entry));
   }
 
   console.log(`✅ Built ${count} page(s) into /docs`);
@@ -106,6 +108,7 @@ function copyRecursive(src, dest) {
       copyRecursive(path.join(src, entry), path.join(dest, entry));
     }
   } else {
+    if (src.toLowerCase().endsWith(".html")) return; // .html is handled by the build loop above
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     fs.copyFileSync(src, dest);
   }
