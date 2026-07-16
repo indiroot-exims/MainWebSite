@@ -473,29 +473,88 @@ a:hover { color: var(--clay-700); }
 .final-cta h2 { margin-bottom: 0.75rem; }
 .final-cta p { max-width: 560px; margin: 0 auto 1.5rem; color: var(--ink-600); }
 
+/* ==== BREADCRUMB BAR ==== */
+.breadcrumb-bar {
+  background: var(--kraft-100);
+  border-bottom: 1px solid var(--kraft-200);
+  padding: 0.6rem 0;
+}
+.breadcrumb-bar .breadcrumb {
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 0.85rem;
+}
+.breadcrumb-bar .breadcrumb-item a {
+  color: var(--forest-700);
+  text-decoration: none;
+}
+.breadcrumb-bar .breadcrumb-item a:hover { color: var(--clay-600); }
+.breadcrumb-bar .breadcrumb-item.active { color: var(--ink-600); }
+
 /* ==== FOOTER STYLING ==== */
 .modern-footer {
   background-color: var(--forest-900) !important;
   color: #eee;
-  padding: 20px 0;
+  padding: 40px 0 0;
   border-top: 4px solid var(--gold-500);
 }
 
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 30px;
-  padding: 0 20px;
+  padding: 0 20px 20px;
 }
 
-.footer-column { flex: 1 1 250px; }
-.footer-column h4 { margin-bottom: 15px; font-weight: 600; }
+.footer-column { flex: 1 1 220px; }
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+  font-family: var(--font-display);
+}
 .footer-column ul { list-style: none; padding-left: 0; }
 .footer-column ul li { margin-bottom: 10px; }
-.footer-column ul li a { color: #ddd; text-decoration: none; }
-.footer-column p { margin-bottom: 10px; }
-.social-icons i { margin-right: 10px; font-size: 20px; }
+.footer-column ul li a {
+  color: #cfd6cd;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-column ul li a:hover { color: var(--gold-500); }
+.footer-column p { margin-bottom: 10px; color: #cfd6cd; }
+.footer-column address p { margin-bottom: 6px; }
+.footer-column address a { color: #cfd6cd; text-decoration: none; }
+.footer-column address a:hover { color: var(--gold-500); }
+
+.social-icons { display: flex; gap: 14px; }
+.social-icons a {
+  color: #cfd6cd;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+.social-icons a:hover {
+  color: var(--forest-900);
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9fa89b;
+}
+.footer-bottom p { margin: 0; }
 
 /* ==== NAVBAR & SEARCH BOX ==== */
 .navbar-collapse {
