@@ -36,48 +36,39 @@
   <!-- ✅ BULLETPROOF B2B SCHEMA: Configured as a WholesaleStore to eliminate console errors while keeping product keywords intact -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WholesaleStore",
-    "name": "IndiRoot Exims",
-    "description": "Global B2B supplier and bulk exporter of Dehydrated Red and White Onion Powder from India to international food manufacturing sectors.",
-    "image": "https://www.indirootexims.com/Images/RedOnionPowder.png",
-    "url": "https://www.indirootexims.com/onion-powder.html",
-    "telephone": "+91-88664-02765",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "IN"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Bulk Onion Powder Export Catalog",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Dehydrated White Onion Powder",
-            "description": "Premium industrial grade white onion powder for food manufacturing. MOQ 500 kg."
-          },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "description": "Wholesale pricing available upon custom commercial RFQ based on volume and destination port."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Dehydrated Red Onion Powder",
-            "description": "Robust and pungent dehydrated red onion powder for spice blending and rubs. MOQ 500 kg."
-          },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "description": "Wholesale pricing available upon custom commercial RFQ based on volume and destination port."
-          }
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "IndiRoot Exims",
+  "description": "Global B2B supplier and bulk exporter of Dehydrated Red and White Onion Powder.",
+  "url": "https://www.indirootexims.com/onion-powder.html",
+  "telephone": "+91-88664-02765",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bulk Onion Powder Export Catalog",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Thing",
+          "name": "Dehydrated White Onion Powder",
+          "description": "Premium industrial grade white onion powder for food manufacturing. MOQ 500 kg."
         }
-      ]
-    }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Thing",
+          "name": "Dehydrated Red Onion Powder",
+          "description": "Robust and pungent dehydrated red onion powder for spice blending and rubs. MOQ 500 kg."
+        }
+      }
+    ]
   }
+}
   </script>
 
   <!-- JSON-LD: Breadcrumb -->
