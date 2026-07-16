@@ -2,12 +2,12 @@
 <nav class="navbar navbar-expand-lg navbar-orange shadow-sm">
   <div class="container d-flex flex-wrap justify-content-between align-items-center">
     <div class="d-flex align-items-center mb-2 mb-lg-0">
-      <img src="/Images/Logo.png" alt="Logo" class="navbar-logo" style="height: 70px; margin-right: 10px;">
-      <a class="navbar-brand fw-bold" href="Index1.02.html">IndiRoot Exims</a>
+      <img src="/Images/Logo.png" alt="IndiRoot Exims logo" class="navbar-logo" style="height: 70px; margin-right: 10px;">
+      <a class="navbar-brand fw-bold" href="/index.html">IndiRoot Exims</a>
     </div>
     <div class="d-none d-lg-flex align-items-center">
-      <span class="nav-item me-3">📞 +91 8866402765</span>
-      <span class="nav-item">📧 info@indirootexims.com</span>
+      <span class="nav-item me-3">📞 <a href="tel:+918866402765" class="text-white text-decoration-none">+91 8866402765</a></span>
+      <span class="nav-item">📧 <a href="mailto:info@indirootexims.com" class="text-white text-decoration-none">info@indirootexims.com</a></span>
     </div>
   </div>
 </nav>
@@ -15,11 +15,10 @@
 <!-- Bottom Navbar (Main Navigation) -->
 <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #13182d;">
   <div class="container">
-    <a class="navbar-brand d-lg-none text-white" href="#">Menu</a>
+    <a class="navbar-brand d-lg-none text-white" href="/index.html">Menu</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMain" aria-controls="navbarNavMain" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse justify-content-between" id="navbarNavMain">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link text-white" href="/index.html">Home</a></li>
@@ -28,30 +27,23 @@
         <li class="nav-item"><a class="nav-link text-white" href="/blog/index.html">Blogs</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="/contact-us.html">Reach Us</a></li>
       </ul>
-
       <!-- Search Box -->
       <div class="search-container position-relative">
-        <i id="search-icon" class="fa fa-search text-white" onclick="toggleSearchBox()" style="cursor: pointer;"></i>
+        <i id="search-icon" class="fa fa-search text-white" onclick="toggleSearchBox()" style="cursor: pointer;" role="button" aria-label="Search products" tabindex="0"></i>
         <input class="form-control mt-2 mt-lg-0" type="text" id="searchProduct" placeholder="Search Product" oninput="searchProducts()" style="display: none;">
         <ul id="search-results" class="list-group" style="position: absolute; display: none; background-color: white; width: 100%; max-height: 200px; overflow-y: auto; z-index: 1000;"></ul>
       </div>
-
       <!-- Mobile contact (visible only on small screens) -->
       <div class="d-lg-none mt-3 text-white text-center">
-        <div>📞 +91 8866402765</div>
-        <div>📧 info@indirootexims.com</div>
+        <div>📞 <a href="tel:+918866402765" class="text-white text-decoration-none">+91 8866402765</a></div>
+        <div>📧 <a href="mailto:info@indirootexims.com" class="text-white text-decoration-none">info@indirootexims.com</a></div>
       </div>
     </div>
   </div>
 </nav>
-<nav aria-label="breadcrumb" class="mb-3">
-  <ol id="breadcrumb" class="breadcrumb container mb-0" style="margin-left:45%;">
+
+<nav aria-label="breadcrumb" class="breadcrumb-bar">
+  <ol id="breadcrumb" class="breadcrumb container mb-0">
     <!-- Breadcrumb items will be injected by JS -->
   </ol>
 </nav>
-
-
-
-
-
-
