@@ -1,7 +1,8 @@
 /* =====================================================================
-   INDIROOT EXIMS — HOMEPAGE STYLES
+   INDIROOT EXIMS — SITE STYLES
    Design tokens: kraft paper + deep botanical green, with a "pigment
    strip" signature motif built from the real colors of the powders.
+   Covers: homepage, about-us, and freeze-dried fruit powder pages.
    ===================================================================== */
 
 :root {
@@ -31,6 +32,8 @@
   --p-garlic:     #E9E4D6;
   --p-amla:       #8FA85C;
   --p-turmeric:   #D6A419;
+  --p-mango:      #E8952E;
+  --p-pineapple:  #E8C547;
 
   /* Type */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
@@ -45,7 +48,7 @@
 body {
   font-family: var(--font-body);
   color: var(--ink-900);
-  background: #ffffff;
+  background: var(--kraft-50);
 }
 
 h1, h2, h3, h4 {
@@ -209,6 +212,8 @@ a:hover { color: var(--clay-700); }
 .pigment-strip .p-lemongrass { background: var(--p-lemongrass); }
 .pigment-strip .p-garlic     { background: var(--p-garlic); }
 .pigment-strip .p-neem       { background: var(--p-neem); }
+.pigment-strip .p-mango      { background: var(--p-mango); }
+.pigment-strip .p-pineapple  { background: var(--p-pineapple); }
 
 /* =========================== STATS BAR ============================= */
 .stats-bar {
@@ -356,6 +361,8 @@ a:hover { color: var(--clay-700); }
 .swatch-garlic      { background: var(--p-garlic); }
 .swatch-amla        { background: var(--p-amla); }
 .swatch-turmeric    { background: var(--p-turmeric); }
+.swatch-mango       { background: var(--p-mango); }
+.swatch-pineapple   { background: var(--p-pineapple); }
 
 /* =========================== PROCESS ================================ */
 .process-section {
@@ -449,6 +456,98 @@ a:hover { color: var(--clay-700); }
 }
 .market-card a + a { margin-top: 0.25rem; }
 
+/* ======================= ABOUT US PAGE ============================= */
+.about-grid-section { padding: 4.5rem 0; background: var(--kraft-50); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+.about-card {
+  background: #fff;
+  border: 1px solid var(--kraft-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(23,48,31,0.12);
+}
+.about-card-media { height: 200px; overflow: hidden; }
+.about-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-card-body { padding: 1.4rem 1.5rem; }
+.about-card-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+.about-card-body p {
+  font-size: 0.92rem;
+  color: var(--ink-600);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Founders & Credentials (also reused for "use cases" on freeze-dried hub) */
+.credentials-section { padding: 4.5rem 0; background: var(--kraft-100); }
+
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+@media (max-width: 992px) {
+  .credential-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 576px) {
+  .credential-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.credential-card {
+  background: #fff;
+  border: 1px solid var(--kraft-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.credential-card i {
+  font-size: 1.8rem;
+  color: var(--clay-600);
+  margin-bottom: 0.9rem;
+}
+.credential-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.9rem;
+}
+.credential-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+.credential-card p {
+  font-size: 0.82rem;
+  color: var(--ink-600);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
 /* =========================== FAQ ===================================== */
 .faq-section { padding: 4.5rem 0; background: var(--kraft-50); }
 .faq-item { margin-bottom: 1.5rem; }
@@ -472,6 +571,105 @@ a:hover { color: var(--clay-700); }
 }
 .final-cta h2 { margin-bottom: 0.75rem; }
 .final-cta p { max-width: 560px; margin: 0 auto 1.5rem; color: var(--ink-600); }
+
+/* ==================== SPEC TABLE (product pages) ==================== */
+.spec-section { padding: 3.5rem 0; background: var(--kraft-50); }
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--kraft-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.spec-table th, .spec-table td {
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--kraft-200);
+  font-size: 0.92rem;
+}
+.spec-table th {
+  width: 38%;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--forest-700);
+  background: var(--kraft-100);
+}
+.spec-table tr:last-child th,
+.spec-table tr:last-child td { border-bottom: none; }
+
+.spec-table.data-table th { width: auto; }
+.spec-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.spec-table.data-table thead th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+.spec-subhead {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--forest-700);
+  margin: 2rem 0 0.75rem;
+}
+.spec-subhead:first-of-type { margin-top: 0; }
+.spec-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.88rem;
+}
+.spec-meta span { display: block; }
+.spec-meta strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--clay-600);
+  margin-bottom: 0.15rem;
+}
+
+.spec-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-600);
+  background: var(--kraft-100);
+  border-left: 3px solid var(--gold-500);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+/* ==================== MARKET/REGULATORY PAGES =========================== */
+.market-detail-section { padding: 4.5rem 0; }
+.market-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .market-detail-grid { grid-template-columns: 1fr; }
+}
+.market-detail-card {
+  background: #fff;
+  border: 1px solid var(--kraft-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+.market-detail-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+.market-detail-card p {
+  font-size: 0.92rem;
+  color: var(--ink-600);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
 
 /* ==== BREADCRUMB BAR ==== */
 .breadcrumb-bar {
