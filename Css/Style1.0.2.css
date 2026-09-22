@@ -128,7 +128,7 @@ a:hover { color: var(--clay-700); }
 
 .hero::after {
   content: "";
-  position: absolute;
+  <!--positionabsolute;-->
   inset: 0;
   background: linear-gradient(
     180deg,
