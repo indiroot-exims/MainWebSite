@@ -107,7 +107,7 @@ a:hover { color: var(--clay-700); }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--forest-900);
+  background: #bec8c2;
 }
 
 .hero-img {
