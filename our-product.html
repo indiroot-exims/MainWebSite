@@ -3,27 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-  
-  <!-- FIX: Title under 60 characters to resolve "Title too long" error -->
-  <title>Botanical &amp; Fruit Powders Catalog | IndiRoot Exims</title>
-  
-  <!-- FIX: Meta description optimized to ~145 characters -->
-  <meta name="description" content="Explore IndiRoot Exims' product catalog of bulk banana, moringa, amla, beet, and spice powders. High-quality export supplier from India." />
-  <meta name="keywords" content="banana powder exporter India, moringa powder supplier, turmeric powder export, natural food powders, dehydrated powders, ginger powder, jackfruit powder, papaya powder" />
-  
-  <!-- FIX: Canonical URL updated to singular 'our-product.html' to fix indexing error -->
+
+  <!-- Universal Title & Meta Description (Google & Bing/Edge Compliant) -->
+  <title>Bulk Food &amp; Botanical Powders Exporter | IndiRoot Exims</title>
+  <meta name="description" content="Explore IndiRoot Exims catalog of bulk banana, moringa, amla, garlic, onion, beetroot &amp; spice powders from India. COA certified for global export." />
+  <meta name="author" content="IndiRoot Exims" />
   <link rel="canonical" href="https://www.indirootexims.com/our-product.html" />
 
-  <!-- Open Graph Tags (Fixed Canonical Match) -->
-  <meta property="og:title" content="Botanical &amp; Fruit Powders Catalog | IndiRoot Exims" />
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Bulk Food &amp; Botanical Powders Catalog | IndiRoot Exims" />
   <meta property="og:site_name" content="IndiRoot Exims" />
   <meta property="og:url" content="https://www.indirootexims.com/our-product.html" />
-  <meta property="og:description" content="Exporter of premium quality banana, moringa, turmeric and other natural powders from India. Explore our product range." />
+  <meta property="og:description" content="Exporter of premium quality banana, moringa, amla, garlic, onion and natural botanical powders from India. View our product range." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.indirootexims.com/Images/og-image.jpg" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="Css/bootstrap.min.css" />
   <link rel="stylesheet" href="Css/all.min.css" />
   <link rel="stylesheet" href="Css/OurProduct.css" />
@@ -31,136 +28,131 @@
   
   <script src="Js/lazysizes.min.js" async></script>
 
-  <!-- Organization Schema -->
+  <!-- Consolidated Clean B2B JSON-LD Schema (Organization, Breadcrumbs, ItemList Catalog) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "IndiRoot Exims",
-    "url": "https://www.indirootexims.com",
-    "logo": "https://www.indirootexims.com/Images/logo.png",
-    "description": "IndiRoot Exims is a merchant exporter based in Vadodara, India, specializing in food powders like banana, moringa, turmeric, and ginger. We serve international clients with quality, compliance, and trust.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "TF-344 Aristo , Kabir Road , Bhayli",
-      "addressLocality": "Vadodara",
-      "addressRegion": "Gujarat",
-      "postalCode": "391410",
-      "addressCountry": "India"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-8866402765",
-      "contactType": "Customer Service",
-      "email": "info@indirootexims.com"
-    }
-  }
-  </script>
-
-  <!-- ItemList Schema (FIXED: Correct sequential positioning from 1 to 11) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "IndiRoot Exims Product List",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "Product",
-        "position": 1,
-        "name": "Banana Powder",
-        "image": "https://www.indirootexims.com/Images/OurProduct-BananaPowder.png",
-        "description": "Premium banana powder export-quality from IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/banana-powder.html"
+        "@type": "Organization",
+        "@id": "https://www.indirootexims.com/#organization",
+        "name": "IndiRoot Exims",
+        "url": "https://www.indirootexims.com",
+        "logo": "https://www.indirootexims.com/Images/logo.png",
+        "description": "IndiRoot Exims is a merchant exporter based in Vadodara, India, specializing in food and botanical powders like banana, moringa, garlic, amla, and spices.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "TF-344 Aristo, Kabir Road, Bhayli",
+          "addressLocality": "Vadodara",
+          "addressRegion": "Gujarat",
+          "postalCode": "391410",
+          "addressCountry": "India"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-8866402765",
+          "contactType": "Customer Service",
+          "email": "info@indirootexims.com"
+        }
       },
       {
-        "@type": "Product",
-        "position": 2,
-        "name": "Moringa Powder",
-        "image": "https://www.indirootexims.com/Images/MoringaPowder-OurProduct.png",
-        "description": "Pure Moringa powder for nutraceutical use by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/moringa-powder.html"
+        "@type": "BreadcrumbList",
+        "@id": "https://www.indirootexims.com/our-product.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.indirootexims.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.indirootexims.com/our-product.html"
+          }
+        ]
       },
       {
-        "@type": "Product",
-        "position": 3,
-        "name": "Amla Powder",
-        "image": "https://www.indirootexims.com/Images/Amla-OurProduct.png",
-        "description": "Pure Amla powder for nutraceutical use by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/amla-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 4,
-        "name": "Wheatgrass Powder",
-        "image": "https://www.indirootexims.com/Images/WheatgrassPowder-OurProduct.png",
-        "description": "Pure Wheatgrass powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/wheatgrass-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 5,
-        "name": "Neem Powder",
-        "image": "https://www.indirootexims.com/Images/NeemPowder-OurProduct.png",
-        "description": "Pure Neem powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/neem-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 6,
-        "name": "Lemongrass Powder",
-        "image": "https://www.indirootexims.com/Images/Lemongrass-OurProduct.png",
-        "description": "Pure Lemongrass powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/lemongrass-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 7,
-        "name": "Beetroot Powder",
-        "image": "https://www.indirootexims.com/Images/Beatroot-Ourproducts.png",
-        "description": "Pure Beetroot powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/beetroot-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 8,
-        "name": "Onion Powder",
-        "image": "https://www.indirootexims.com/Images/OnionPowder-OurProduct.png",
-        "description": "Pure Onion powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/onion-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 9,
-        "name": "All Spices",
-        "image": "https://www.indirootexims.com/Images/SpicesOurProduct.png",
-        "description": "Pure Spices by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/Spices.html"
-      },
-      {
-        "@type": "Product",
-        "position": 10,
-        "name": "Tomato Powder",
-        "image": "https://www.indirootexims.com/Images/SpicesOurProduct.png",
-        "description": "Tomato Powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/tomato-powder.html"
-      },
-      {
-        "@type": "Product",
-        "position": 11,
-        "name": "Garlic Powder",
-        "image": "https://www.indirootexims.com/Images/freeze-dried-powder.png",
-        "description": "Freeze-Dried Products by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/freeze-dried-products.html"
-      },
-      {
-        "@type": "Product",
-        "position": 12,
-        "name": "Freeze-Dried Products",
-        "image": "https://www.indirootexims.com/Images/GarlicPowderGradeA.png",
-        "description": "Garlic Powder by IndiRoot Exims.",
-        "url": "https://www.indirootexims.com/freeze-dried-products.html"
+        "@type": "ItemList",
+        "@id": "https://www.indirootexims.com/our-product.html#itemlist",
+        "name": "IndiRoot Exims Product List",
+        "description": "Export-ready catalog of natural botanical and fruit powders from India.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Freeze-Dried Products",
+            "url": "https://www.indirootexims.com/freeze-dried-products.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Banana Powder",
+            "url": "https://www.indirootexims.com/banana-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Moringa Powder",
+            "url": "https://www.indirootexims.com/moringa-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Amla Powder",
+            "url": "https://www.indirootexims.com/amla-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Beetroot Powder",
+            "url": "https://www.indirootexims.com/beetroot-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Lemongrass Powder",
+            "url": "https://www.indirootexims.com/lemongrass-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Neem Powder",
+            "url": "https://www.indirootexims.com/neem-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Wheatgrass Powder",
+            "url": "https://www.indirootexims.com/wheatgrass-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Onion Powder",
+            "url": "https://www.indirootexims.com/onion-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Spices",
+            "url": "https://www.indirootexims.com/Spices.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Tomato Powder",
+            "url": "https://www.indirootexims.com/tomato-powder.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Garlic Powder",
+            "url": "https://www.indirootexims.com/garlic-powder.html"
+          }
+        ]
       }
-    
     ]
   }
   </script>
@@ -176,13 +168,13 @@
       <div class="hero-decorative-leaf">🌿</div>
       <div class="container">
         <div class="hero-tagline-badge">Export-Quality Natural Powders</div>
-        <h1>Premium Food Powders<br>Exported globally from India</h1>
-        <p>Trusted global partner for high-potency organic botanical ingredients, banana powder, moringa, and customized spice solutions. Processed under strict certified compliance.</p>
+        <h1>Bulk Food &amp; Botanical Powders<br>Exported Globally from India</h1>
+        <p>Trusted global partner for high-potency organic botanical ingredients, banana powder, moringa, garlic, onion, and customized spice solutions. Processed under strict certified compliance.</p>
         <div class="hero-pill-container">
           <span class="hero-feature-pill">🌍 Globally Exported</span>
           <span class="hero-feature-pill">🌱 Organic Options</span>
           <span class="hero-feature-pill">🏭 ISO Certified</span>
-          <span class="hero-feature-pill">📦 Bulk & Custom Packaging</span>
+          <span class="hero-feature-pill">📦 Bulk &amp; Custom Packaging</span>
         </div>
       </div>
     </section>
@@ -205,13 +197,14 @@
         <p class="showcase-subtext">Explore custom processing methods, production variants, and global logistics options.</p>
         
         <div class="premium-product-grid">
-           <article class="modern-product-card">
-             <div class="card-img-container bg-accent-gold">
+
+          <article class="modern-product-card">
+            <div class="card-img-container bg-accent-gold">
               <img data-src="Images/freeze-dried-powder.png" class="lazyload" alt="Freeze-Dried Products exporter from India" />
             </div>
-           <div class="card-body-wrapper">
+            <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Freeze-Dried Products</h2>
+                <h3>Freeze-Dried Products</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Fruit powders</span>
@@ -222,7 +215,6 @@
               <a class="card-cta-link" href="freeze-dried-products.html">View details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
-        
 
           <article class="modern-product-card">
             <div class="card-img-container bg-accent-gold">
@@ -230,7 +222,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Banana Powder</h2>
+                <h3>Banana Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Organic</span>
@@ -248,7 +240,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Moringa Powder</h2>
+                <h3>Moringa Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Organic</span>
@@ -265,7 +257,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Amla Powder</h2>
+                <h3>Amla Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Shade Dried</span>
@@ -281,7 +273,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Beetroot Powder</h2>
+                <h3>Beetroot Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Organic</span>
@@ -298,7 +290,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Lemongrass Powder</h2>
+                <h3>Lemongrass Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Shade Dried</span>
@@ -314,7 +306,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Neem Powder</h2>
+                <h3>Neem Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Shade Dried</span>
@@ -330,7 +322,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Wheatgrass Powder</h2>
+                <h3>Wheatgrass Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Organic</span>
@@ -345,7 +337,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Onion Powder</h2>
+                <h3>Onion Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Red Onion</span>
@@ -361,7 +353,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Spices</h2>
+                <h3>Spices</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Whole</span>
@@ -378,7 +370,7 @@
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Tomato Powder</h2>
+                <h3>Tomato Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Dehydrated</span>
@@ -387,13 +379,14 @@
               <a class="card-cta-link" href="tomato-powder.html">View details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
-           <article class="modern-product-card">
+
+          <article class="modern-product-card">
             <div class="card-img-container bg-accent-gold">
               <img data-src="Images/GarlicPowderGradeA.png" class="lazyload" alt="Indian Garlic Powder Exporter" />
             </div>
             <div class="card-body-wrapper">
               <div class="card-heading-title">
-                <h2>Garlic Powder</h2>
+                <h3>Garlic Powder</h3>
               </div>
               <div class="card-variant-tags">
                 <span class="v-tag">Dehydrated</span>
